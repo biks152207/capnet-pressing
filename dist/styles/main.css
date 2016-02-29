@@ -412,6 +412,13 @@ body {
   color: #333;
   background: white;
 }
+@media (max-width: 1000px) {
+  body {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 a {
   text-decoration: none;
@@ -428,6 +435,13 @@ body > nav {
       -ms-flex-preferred-size: 140px;
           flex-basis: 140px;
 }
+@media (max-width: 1000px) {
+  body > nav {
+    -webkit-flex-basis: 70px;
+        -ms-flex-preferred-size: 70px;
+            flex-basis: 70px;
+  }
+}
 body > nav div.logo_container {
   padding: 20px 10px;
   height: 160px;
@@ -437,6 +451,17 @@ body > nav div.logo_container a {
 }
 body > nav div.logo_container img.logo {
   width: 100%;
+  max-height: 100%;
+}
+@media (max-width: 1000px) {
+  body > nav div.logo_container {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 0;
+    height: 70px;
+    width: 20%;
+    text-align: center;
+  }
 }
 body > nav a.nav_link {
   position: relative;
@@ -452,8 +477,25 @@ body > nav a.nav_link {
   box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
   transition: 0.1s;
 }
+@media (max-width: 1000px) {
+  body > nav a.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    padding: 48px 0 10px 0;
+    height: 70px;
+    width: 20%;
+    font-size: 10px;
+    line-height: 12px;
+    box-shadow: inset -1px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+}
 body > nav a.nav_link:first-of-type {
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 1000px) {
+  body > nav a.nav_link:first-of-type {
+    box-shadow: inset 1px 0px 0px 0px rgba(255, 255, 255, 0.2), inset -1px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
 }
 body > nav a.nav_link:hover, body > nav a.nav_link.active {
   background: rgba(255, 255, 255, 0.2);
@@ -461,6 +503,11 @@ body > nav a.nav_link:hover, body > nav a.nav_link.active {
 }
 body > nav a.nav_link.active {
   box-shadow: inset -3px 0px 0px 0px #F88223;
+}
+@media (max-width: 1000px) {
+  body > nav a.nav_link.active {
+    box-shadow: inset 0px -2px 0px 0px #F88223;
+  }
 }
 body > nav a.nav_link:before {
   display: inline-block;
@@ -472,7 +519,15 @@ body > nav a.nav_link:before {
   height: 50px;
   width: 50px;
   background: url("../images/layout/navigation.svg");
-  background-width: 50px;
+  background-size: 50px;
+}
+@media (max-width: 1000px) {
+  body > nav a.nav_link:before {
+    margin: 0 0 0 -15px;
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+  }
 }
 body > nav a.nav_link.services:before {
   background-position: 0 -50px;
@@ -483,9 +538,29 @@ body > nav a.nav_link.contact:before {
 body > nav a.nav_link.about:before {
   background-position: 0 -150px;
 }
+@media (max-width: 1000px) {
+  body > nav a.nav_link.services:before {
+    background-position: 0 -30px;
+  }
+  body > nav a.nav_link.contact:before {
+    background-position: 0 -60px;
+  }
+  body > nav a.nav_link.about:before {
+    background-position: 0 -90px;
+  }
+}
 
 body > main {
-  margin-right: auto;
+  -webkit-flex-basis: calc(100% - 140px);
+      -ms-flex-preferred-size: calc(100% - 140px);
+          flex-basis: calc(100% - 140px);
+}
+@media (max-width: 1000px) {
+  body > main {
+    -webkit-flex-basis: calc(100% - 70px);
+        -ms-flex-preferred-size: calc(100% - 70px);
+            flex-basis: calc(100% - 70px);
+  }
 }
 
 body > main.index {
@@ -501,9 +576,6 @@ body > main.index {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-flex-basis: calc(100% - 140px);
-      -ms-flex-preferred-size: calc(100% - 140px);
-          flex-basis: calc(100% - 140px);
   position: relative;
   z-index: 0;
   background: #050622 url("../images/index/background.jpg");
@@ -536,12 +608,26 @@ body > main.index div.title_container h1 {
   font-size: 48px;
   line-height: 64px;
 }
+@media (max-width: 767px) {
+  body > main.index div.title_container h1 {
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
 body > main.index div.title_container p {
   margin: 0 0 25px 0;
   padding: 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
+}
+@media (max-width: 767px) {
+  body > main.index div.title_container p {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 body > main.index button {
   padding: 13px 30px;
@@ -553,7 +639,14 @@ body > main.index button {
   outline: none;
   border: none;
   box-shadow: none;
-  transition: 0.1s;
+  transition: background 0.1s;
+}
+@media (max-width: 767px) {
+  body > main.index button {
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 body > main.index button:hover, body > main.index button:focus, body > main.index button.active, body > main.index button:active {
   background: #f7740a;
@@ -576,12 +669,30 @@ body > main.index footer p {
   font-size: 14px;
   line-height: 20px;
 }
+@media (max-width: 767px) {
+  body > main.index footer a,
+  body > main.index footer p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
 body > main.index footer a {
   margin: 0 20px 0 0;
 }
 body > main.index footer a:hover {
   text-decoration: underline;
 }
+@media (max-width: 767px) {
+  body > main.index footer a:last-of-type {
+    margin: 0;
+  }
+}
 body > main.index footer p {
   margin: 0;
+}
+@media (max-width: 767px) {
+  body > main.index footer p {
+    margin: 10px 0 0 0;
+    display: block;
+  }
 }

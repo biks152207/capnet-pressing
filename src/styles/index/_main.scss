@@ -3,7 +3,6 @@ body > main.index {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-basis: calc(100% - 140px);
   position: relative;
   z-index: 0;
   background: #050622 url('../images/index/background.jpg');
@@ -37,6 +36,12 @@ body > main.index {
       font-weight: 400;
       font-size: 48px;
       line-height: 64px;
+
+      @media (max-width: 767px) {
+        margin: 0 0 15px 0;
+        font-size: 30px;
+        line-height: 40px;
+      }
     }
 
     p {
@@ -45,6 +50,12 @@ body > main.index {
       font-weight: 400;
       font-size: 24px;
       line-height: 30px;
+
+      @media (max-width: 767px) {
+        margin: 0 0 20px 0;
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
 
@@ -58,7 +69,13 @@ body > main.index {
     outline: none;
     border: none;
     box-shadow: none;
-    transition: 0.1s;
+    transition: background 0.1s;
+
+    @media (max-width: 767px) {
+      padding: 9px 20px;
+      font-size: 16px;
+      line-height: 22px;
+    }
 
     &:hover, &:focus, &.active, &:active {
       background: darken($color_capnet_secondary, 5%);
@@ -82,16 +99,30 @@ body > main.index {
       font-weight: 300;
       font-size: 14px;
       line-height: 20px;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
 
     a {
       margin: 0 20px 0 0;
 
       &:hover { text-decoration: underline; }
+
+      @media (max-width: 767px) {
+        &:last-of-type { margin: 0; }
+      }
     }
 
     p {
       margin: 0;
+
+      @media (max-width: 767px) {
+        margin: 10px 0 0 0;
+        display: block;
+      }
     }
   }
 }
