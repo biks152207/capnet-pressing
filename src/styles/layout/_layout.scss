@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+
+body {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: #2F92DD; // Blue
+}
+
+a:hover {
+  color: #2A6CB4; // Dark blue
+}

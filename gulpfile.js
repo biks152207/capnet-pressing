@@ -54,6 +54,9 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
+  gulp.start('styles');
+  gulp.start('scripts');
+  gulp.start('images');
   gulp.start('watch');
 });
 
@@ -68,9 +71,12 @@ gulp.task('watch', function() {
   // Watch image files
   gulp.watch('src/images/**/*', ['images']);
 
+  // Watch ejs files
+  gulp.watch('views/**/*', ['scripts', 'images']);
+
   // Create LiveReload server
   livereload.listen();
 
   // Watch any files in dist/, reload on change
-  gulp.watch(['dist/**']).on('change', livereload.changed);
+  gulp.watch(['dist/**', 'views/**/*']).on('change', livereload.changed);
 });

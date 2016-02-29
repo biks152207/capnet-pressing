@@ -1,6 +1,8 @@
-$badass: violet;
+@import 'shared/normalize';
+@import 'shared/colors';
 
-body {
-  margin: 0;
-  background-color: $badass;
-}
+@import 'layout/layout';
+@import 'layout/navigation';
+@import 'layout/main';
+
+@import 'index/main';
