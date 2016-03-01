@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
-/* GET index page. */
+/* GET legal page. */
 router.get("/", function(req, res, next) {
-  res.render("index", { seo_title: "Cap'Net Pressing" });
+  res.render("legal", { seo_title: "Cap'Net Pressing | Mentions légales" });
 });
 
 module.exports = router;
