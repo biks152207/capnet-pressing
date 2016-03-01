@@ -511,7 +511,7 @@ body > nav a.nav_link.active {
 }
 body > nav a.nav_link:before {
   display: inline-block;
-  content: '';
+  content: "";
   position: absolute;
   top: 12px;
   left: 50%;

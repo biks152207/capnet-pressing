@@ -83,14 +83,14 @@ body > nav {
     // Icons
     &:before {
       display: inline-block;
-      content: '';
+      content: "";
       position: absolute;
       top: 12px;
       left: 50%;
       margin: 0 0 0 -25px;
       height: 50px;
       width: 50px;
-      background: url('../images/layout/navigation.svg');
+      background: url("../images/layout/navigation.svg");
       background-size: 50px;
 
       @media (max-width: 1000px) {
