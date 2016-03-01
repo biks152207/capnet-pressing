@@ -5,4 +5,7 @@
 @import "layout/navigation";
 @import "layout/main";
 
-@import "index/main";
+@import "index/shared";
+
+@import "location/layout";
+@import "location/page_content";

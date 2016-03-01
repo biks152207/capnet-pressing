@@ -7,7 +7,6 @@ body > main.index {
   z-index: 0;
   background: #050622 url("../images/index/background.jpg");
   background-size: cover;
-  color: white;
   text-align: center;
 
   // Overlay
@@ -36,6 +35,7 @@ body > main.index {
       font-weight: 400;
       font-size: 48px;
       line-height: 64px;
+      color: white;
 
       @media (max-width: 767px) {
         margin: 0 0 15px 0;
@@ -50,6 +50,7 @@ body > main.index {
       font-weight: 400;
       font-size: 24px;
       line-height: 30px;
+      color: white;
 
       @media (max-width: 767px) {
         margin: 0 0 20px 0;
@@ -61,7 +62,6 @@ body > main.index {
 
   button {
     padding: 13px 30px;
-    background: $color_capnet_secondary;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -69,6 +69,8 @@ body > main.index {
     outline: none;
     border: none;
     box-shadow: none;
+    color: white;
+    background: $color_capnet_secondary;
     transition: background 0.1s;
 
     @media (max-width: 767px) {

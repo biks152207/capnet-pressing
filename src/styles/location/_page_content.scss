@@ -1,0 +1,28 @@
+body > main.location div.page_content {
+
+  h1 {
+    margin: 0 0 10px 0;
+
+    @media (max-width: 767px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  ul.locations {
+    margin: 0;
+    padding: 0;
+  }
+
+  li.location {
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+
+    @media (max-width: 767px) {
+      padding: 10px 0 12px 0;
+    }
+
+    &:not(:last-child) { box-shadow: inset 0px -1px 0px 0px $color_gray; }
+  }
+
+}

@@ -410,7 +410,7 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   color: #333;
-  background: white;
+  background: #F7F7F7;
 }
 @media (max-width: 1000px) {
   body {
@@ -427,6 +427,49 @@ a {
 
 a:hover {
   color: #2A6CB4;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  color: #010454;
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+h2 {
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #F88223;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+}
+@media (max-width: 767px) {
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 body > nav {
@@ -580,7 +623,6 @@ body > main.index {
   z-index: 0;
   background: #050622 url("../images/index/background.jpg");
   background-size: cover;
-  color: white;
   text-align: center;
 }
 body > main.index:before {
@@ -607,6 +649,7 @@ body > main.index div.title_container h1 {
   font-weight: 400;
   font-size: 48px;
   line-height: 64px;
+  color: white;
 }
 @media (max-width: 767px) {
   body > main.index div.title_container h1 {
@@ -621,6 +664,7 @@ body > main.index div.title_container p {
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
+  color: white;
 }
 @media (max-width: 767px) {
   body > main.index div.title_container p {
@@ -631,7 +675,6 @@ body > main.index div.title_container p {
 }
 body > main.index button {
   padding: 13px 30px;
-  background: #F88223;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -639,6 +682,8 @@ body > main.index button {
   outline: none;
   border: none;
   box-shadow: none;
+  color: white;
+  background: #F88223;
   transition: background 0.1s;
 }
 @media (max-width: 767px) {
@@ -698,4 +743,105 @@ body > main.index footer a:hover {
 }
 body > main.index footer p {
   margin: 0;
+}
+
+body > main.location {
+  position: relative;
+}
+@media (min-width: 768px) {
+  body > main.location {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  body > main.location {
+    position: relative;
+    z-index: 1;
+    overflow-y: scroll;
+  }
+}
+body > main.location div.page_content {
+  padding: 30px 40px;
+  background: #F7F7F7;
+  box-shadow: 10px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+@media (min-width: 768px) {
+  body > main.location div.page_content {
+    -webkit-flex-basis: 60%;
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+    position: relative;
+    z-index: 2;
+  }
+}
+@media (max-width: 767px) {
+  body > main.location div.page_content {
+    padding: 20px 20px 30px 20px;
+  }
+}
+@media (max-width: 767px) {
+  body > main.location div.page_content div.map_placeholder_mobile {
+    margin: 0 0 5px 0;
+    height: 150px;
+  }
+}
+body > main.location div.maps_container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 768px) {
+  body > main.location div.maps_container {
+    -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
+    position: relative;
+    z-index: 1;
+  }
+}
+@media (max-width: 767px) {
+  body > main.location div.maps_container {
+    position: absolute;
+    z-index: 2;
+    top: 65px;
+    left: 20px;
+    right: 20px;
+    height: 150px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
+body > main.location div.maps_container div.map {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+
+body > main.location div.page_content h1 {
+  margin: 0 0 10px 0;
+}
+@media (max-width: 767px) {
+  body > main.location div.page_content h1 {
+    margin: 0 0 15px 0;
+  }
+}
+body > main.location div.page_content ul.locations {
+  margin: 0;
+  padding: 0;
+}
+body > main.location div.page_content li.location {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+}
+@media (max-width: 767px) {
+  body > main.location div.page_content li.location {
+    padding: 10px 0 12px 0;
+  }
+}
+body > main.location div.page_content li.location:not(:last-child) {
+  box-shadow: inset 0px -1px 0px 0px #E5E5E5;
 }
