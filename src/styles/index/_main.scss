@@ -90,6 +90,7 @@ body > main.index {
     right: 0;
     padding: 20px;
 
+    div.links,
     a,
     p {
       display: inline-block;
@@ -106,6 +107,14 @@ body > main.index {
       }
     }
 
+    div.links {
+      @media (max-width: 767px) {
+        line-height: 16px;
+        margin: 0 0 10px 0;
+        display: block;
+      }
+    }
+
     a {
       margin: 0 20px 0 0;
 
@@ -116,13 +125,6 @@ body > main.index {
       }
     }
 
-    p {
-      margin: 0;
-
-      @media (max-width: 767px) {
-        margin: 10px 0 0 0;
-        display: block;
-      }
-    }
+    p { margin: 0; }
   }
 }

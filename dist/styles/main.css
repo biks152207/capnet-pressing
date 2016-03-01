@@ -659,6 +659,7 @@ body > main.index footer {
   right: 0;
   padding: 20px;
 }
+body > main.index footer div.links,
 body > main.index footer a,
 body > main.index footer p {
   display: inline-block;
@@ -670,10 +671,18 @@ body > main.index footer p {
   line-height: 20px;
 }
 @media (max-width: 767px) {
+  body > main.index footer div.links,
   body > main.index footer a,
   body > main.index footer p {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+@media (max-width: 767px) {
+  body > main.index footer div.links {
+    line-height: 16px;
+    margin: 0 0 10px 0;
+    display: block;
   }
 }
 body > main.index footer a {
@@ -689,10 +698,4 @@ body > main.index footer a:hover {
 }
 body > main.index footer p {
   margin: 0;
-}
-@media (max-width: 767px) {
-  body > main.index footer p {
-    margin: 10px 0 0 0;
-    display: block;
-  }
 }
