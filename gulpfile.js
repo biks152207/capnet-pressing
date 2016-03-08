@@ -26,18 +26,19 @@ gulp.task("styles", function() {
     .pipe(notify({ message: "Styles task complete" }));
 });
 
+// TODO @lanceplaine
 // Scripts
-gulp.task("scripts", function() {
-  return gulp.src("src/scripts/**/*.js")
-    .pipe(jshint(".jshintrc"))
-    .pipe(jshint.reporter("default"))
-    .pipe(concat("main.js"))
-    .pipe(gulp.dest("public/scripts"))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(uglify())
-    .pipe(gulp.dest("public/scripts"))
-    .pipe(notify({ message: "Scripts task complete" }));
-});
+// gulp.task("scripts", function() {
+//   return gulp.src("src/scripts/**/*.js")
+//     .pipe(jshint(".jshintrc"))
+//     .pipe(jshint.reporter("default"))
+//     .pipe(concat("main.js"))
+//     .pipe(gulp.dest("public/scripts"))
+//     .pipe(rename({ suffix: ".min" }))
+//     .pipe(uglify())
+//     .pipe(gulp.dest("public/scripts"))
+//     .pipe(notify({ message: "Scripts task complete" }));
+// });
 
 // Images
 gulp.task("images", function() {
@@ -49,13 +50,16 @@ gulp.task("images", function() {
 
 // Clean
 gulp.task("clean", function() {
-  return del(["public/styles", "public/scripts", "public/images"]);
+  return del(["public/styles", "public/images"]);
+  // TODO @lanceplaine
+  // return del(["public/styles", "public/scripts", "public/images"]);
 });
 
 // Default task
 gulp.task("default", ["clean"], function() {
   gulp.start("styles");
-  gulp.start("scripts");
+  // TODO @lanceplaine
+  // gulp.start("scripts");
   gulp.start("images");
   gulp.start("watch");
 });
@@ -65,8 +69,9 @@ gulp.task("watch", function() {
   // Watch .scss files
   gulp.watch("src/styles/**/*.scss", ["styles"]);
 
+  // TODO @lanceplaine
   // Watch .js files
-  gulp.watch("src/scripts/**/*.js", ["scripts"]);
+  // gulp.watch("src/scripts/**/*.js", ["scripts"]);
 
   // Watch image files
   gulp.watch("src/images/**/*", ["images"]);
