@@ -41,17 +41,6 @@ angular.module("todoListApp")
 "use strict";
 
 angular.module("todoListApp")
-.directive("todo", function(){
-  return {
-    templateUrl: "templates/todo.html",
-    replace: true,
-    controller: "todoCtrl"
-  }
-});
-
-"use strict";
-
-angular.module("todoListApp")
 .service("dataService", function($http) {
   this.getTodos = function(cb) {
     $http.get("/mock/todos.json").then(cb);
@@ -65,4 +54,15 @@ angular.module("todoListApp")
     console.log("I saved " + todos.length + " todos!");
   };
 
+});
+
+"use strict";
+
+angular.module("todoListApp")
+.directive("todo", function(){
+  return {
+    templateUrl: "templates/todo.html",
+    replace: true,
+    controller: "todoCtrl"
+  }
 });

@@ -71,7 +71,7 @@ gulp.task("watch", function() {
   // Watch image files
   gulp.watch("src/images/**/*", ["images"]);
 
-  // Watch ejs files
+  // Watch html files
   gulp.watch("views/**/*", ["scripts", "images"]);
 
   // Create LiveReload server
