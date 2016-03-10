@@ -1,7 +1,7 @@
 "use strict";
 
 var express = require("express"),
-    locations = require("../../mock.locations.json");
+    locations = require("../../mock/locations.json");
 
 var api = express.Router();
 
