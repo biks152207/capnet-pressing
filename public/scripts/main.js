@@ -1,10 +1,10 @@
 "use strict";
 
-angular.module("todoListApp", []);
+angular.module("capNetPressingApp", []);
 
 "use strict";
 
-angular.module("todoListApp")
+angular.module("capNetPressingApp")
 .controller("mainCtrl", function($scope, dataService){
 
   dataService.getTodos(function(response){
@@ -21,7 +21,7 @@ angular.module("todoListApp")
 
 "use strict";
 
-angular.module("todoListApp")
+angular.module("capNetPressingApp")
 .controller("todoCtrl", function($scope, dataService) {
   $scope.deleteTodo = function(todo, index) {
     $scope.todos.splice(index, 1);
@@ -40,7 +40,7 @@ angular.module("todoListApp")
 
 "use strict";
 
-angular.module("todoListApp")
+angular.module("capNetPressingApp")
 .service("dataService", function($http) {
   this.getTodos = function(cb) {
     $http.get("/mock/todos.json").then(cb);
@@ -58,7 +58,7 @@ angular.module("todoListApp")
 
 "use strict";
 
-angular.module("todoListApp")
+angular.module("capNetPressingApp")
 .directive("todo", function(){
   return {
     templateUrl: "templates/todo.html",

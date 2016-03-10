@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("todoListApp")
+angular.module("capNetPressingApp")
 .controller("mainCtrl", function($scope, dataService){
 
   dataService.getTodos(function(response){

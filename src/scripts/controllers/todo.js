@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("todoListApp")
+angular.module("capNetPressingApp")
 .controller("todoCtrl", function($scope, dataService) {
   $scope.deleteTodo = function(todo, index) {
     $scope.todos.splice(index, 1);
