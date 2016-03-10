@@ -6,8 +6,8 @@ var favicon = require("serve-favicon");
 var logger = require("morgan");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
+var api = require("./api");
 
-var api = express.Router();
 var indexRoute = require("../routes/index");
 var locationRoute = require("../routes/location");
 var servicesRoute = require("../routes/services");
@@ -36,68 +36,6 @@ app.use("/services", servicesRoute);
 app.use("/contact", contactRoute);
 app.use("/about", aboutRoute);
 app.use("/legal", legalRoute);
-
-api.get("/locations", function (req, res) {
-  res.json({
-    locations: [
-      {
-        name: "Lyon 2 - Ferrandière",
-        address: "24 rue Ferrandiere",
-        city: "Lyon",
-        zip: "69002",
-        phone: "+33 4 78 42 27 96",
-        hours: {
-          weekdays: ["07:30", "19:15"],
-          saturday: ["08:00", "18:00"]
-        }
-      },
-      {
-        name: "Lyon 2 - Charité",
-        address: "41 Rue de la Charité",
-        city: "Lyon",
-        zip: "69002",
-        phone: "+33 4 78 37 90 95",
-        hours: {
-          weekdays: ["07:30", "19:00"],
-          saturday: ["08:00", "18:00"]
-        }
-      },
-      {
-        name: "Lyon 2 - Bellecour",
-        address: "54 rue Sala",
-        city: "Lyon",
-        zip: "69002",
-        phone: "+33 4 72 56 04 13",
-        hours: {
-          weekdays: ["08:00", "12:30", "14:00", "19:00"],
-          saturday: ["08:00", "14:00"]
-        }
-      },
-      {
-        name: "Lyon 3 - Montchat",
-        address: "88 Cours du docteur Long",
-        city: "Lyon",
-        zip: "69003",
-        phone: "+33 4 72 36 32 13",
-        hours: {
-          weekdays: ["07:30", "19:00"],
-          saturday: ["08:00", "19:00"]
-        }
-      },
-      {
-        name: "Lyon 7 - Thibaudière",
-        address: "50 Rue de la Thibaudière",
-        city: "Lyon",
-        zip: "69007",
-        phone: "+33 4 72 71 03 29",
-        hours: {
-          weekdays: ["07:45", "19:15"],
-          saturday: ["08:00", "19:00"]
-        }
-      }
-    ]
-  });
-})
 
 app.use("/api", api);
 
