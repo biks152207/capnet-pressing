@@ -28,13 +28,7 @@ gulp.task("styles", function() {
 
 // Scripts
 gulp.task("scripts", function() {
-  return gulp.src("src/scripts/**/*.js")
-    .pipe(jshint(".jshintrc"))
-    .pipe(jshint.reporter("default"))
-    .pipe(concat("main.js"))
-    .pipe(gulp.dest("public/scripts"))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(uglify())
+  return gulp.src("src/scripts/**/*")
     .pipe(gulp.dest("public/scripts"))
     .pipe(notify({ message: "Scripts task complete" }));
 });
@@ -65,8 +59,8 @@ gulp.task("watch", function() {
   // Watch .scss files
   gulp.watch("src/styles/**/*.scss", ["styles"]);
 
-  // Watch .js files
-  gulp.watch("src/scripts/**/*.js", ["scripts"]);
+  // Watch scripts folder
+  gulp.watch("src/scripts/**/*", ["scripts"]);
 
   // Watch image files
   gulp.watch("src/images/**/*", ["images"]);
