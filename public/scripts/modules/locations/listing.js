@@ -27,6 +27,29 @@
     }
 
     /**
+     * getHoursNotice: Display a different notice depening of if the dry cleaning
+     * pause for lunch or not
+     * @param  {Array} hours [Array containing the opening, lunch and closing hours]
+     * @return {String}      [Sentence: Hours notice]
+     */
+    this.getHoursNotice = function (hours) {
+
+      var nb_hours = hours.length,
+          sentence = "";
+
+      if (nb_hours === 2) {
+
+        sentence = "Horaires (non-stop) :";
+      }
+      else {
+
+        sentence = "Horaires :";
+      }
+
+      return sentence;
+    }
+
+    /**
      * formatHours: Format the hours from [08:00, 16:00] to "from 8am to 4pm"
      * @param  {Array} hours [Array containing the opening, lunch and closing hours]
      * @return {String}      [Sentence describing the hours of the dry cleaning]
