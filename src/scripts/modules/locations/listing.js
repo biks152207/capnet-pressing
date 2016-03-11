@@ -5,16 +5,26 @@
 
   /**
    * locationsListingController
-   * @param {Object}  $scope
    * @param {Factory} dataService [Return API data]
    */
-  function locationsListingController ($scope, dataService) {
+  function locationsListingController (dataService) {
+    var _locations = [];
 
-    dataService.getLocations(function (response) {
-      var locations = response.data.locations;
-      $scope.locations =  locations;
-    });
+    var init = function () {
+      dataService.getLocations(function (response) {
+        _locations = response.data.locations;
+      });
+    }
 
+    init();
+
+    /**
+     * getLocations: Get the locations
+     * @return {Array} [Array of objects which contains the dry cleaning's locations]
+     */
+    this.getLocations = function () {
+      return _locations;
+    }
   }
 
   app.directive("locationsListing", function () {
