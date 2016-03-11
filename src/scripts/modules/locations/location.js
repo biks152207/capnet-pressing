@@ -10,6 +10,11 @@
    */
   function locationController ($scope, dataService) {
 
+    dataService.getLocations(function (response) {
+      var locations = response.data.locations;
+      $scope.locations =  locations;
+    });
+
   }
 
   app.directive("location", function () {
