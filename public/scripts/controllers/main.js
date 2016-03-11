@@ -1,11 +1,13 @@
-"use strict";
+;(function () {
+  "use strict";
 
-angular.module("capNetPressingApp")
-       .controller("mainCtrl", function ($scope, dataService) {
+  angular.module("capNetPressingApp")
+         .controller("mainCtrl", function ($scope, dataService) {
 
-  dataService.getLocations(function (response) {
-    var locations = response.data.locations;
-    $scope.locations =  locations;
-  });
+    dataService.getLocations(function (response) {
+      var locations = response.data.locations;
+      $scope.locations =  locations;
+    });
 
-})
+  })
+})();

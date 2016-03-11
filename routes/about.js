@@ -1,11 +1,13 @@
-"use strict";
+;(function () {
+  "use strict";
 
-var express = require("express");
-var router = express.Router();
+  var express = require("express");
+  var router = express.Router();
 
-/* GET about page. */
-router.get("/", function(req, res, next) {
-  res.render("about.html");
-});
+  /* GET about page. */
+  router.get("/", function(req, res, next) {
+    res.render("about.html");
+  });
 
-module.exports = router;
+  module.exports = router;
+})();

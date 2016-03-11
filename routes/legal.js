@@ -1,11 +1,13 @@
-"use strict";
+;(function () {
+  "use strict";
 
-var express = require("express");
-var router = express.Router();
+  var express = require("express");
+  var router = express.Router();
 
-/* GET legal page. */
-router.get("/", function(req, res, next) {
-  res.render("legal.html");
-});
+  /* GET legal page. */
+  router.get("/", function(req, res, next) {
+    res.render("legal.html");
+  });
 
-module.exports = router;
+  module.exports = router;
+})();

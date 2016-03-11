@@ -10,7 +10,6 @@
    */
   function locationController ($scope, dataService) {
 
-
   }
 
   app.directive("location", function () {
