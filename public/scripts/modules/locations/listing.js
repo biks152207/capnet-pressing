@@ -4,11 +4,11 @@
   var app = angular.module("capNetPressingApp");
 
   /**
-   * locationController
+   * locationsListingController
    * @param {Object}  $scope
    * @param {Factory} dataService [Return API data]
    */
-  function locationController ($scope, dataService) {
+  function locationsListingController ($scope, dataService) {
 
     dataService.getLocations(function (response) {
       var locations = response.data.locations;
@@ -17,13 +17,13 @@
 
   }
 
-  app.directive("location", function () {
+  app.directive("locationsListing", function () {
     return {
       restrict: "A",
       replace: false,
-      templateUrl: "scripts/modules/locations/location.html",
-      controller: locationController,
-      controllerAs: "locationCtrl"
+      templateUrl: "scripts/modules/locations/listing.html",
+      controller: locationsListingController,
+      controllerAs: "locationsListingCtrl"
     }
   });
 })();
