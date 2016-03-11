@@ -1,3 +1,5 @@
-"use strict";
+;(function () {
+  "use strict";
 
-angular.module("capNetPressingApp", []);
+  angular.module("capNetPressingApp", []);
+})();
