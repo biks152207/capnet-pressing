@@ -22,8 +22,8 @@
  --><div class="hours">
       <!-- TODO @kla: Write "non-stop" only when no pause for lunch -->
       Horaires (non-stop) :<br>
-      Du lundi au vendredi : {{ location.hours.weekdays }}<br>
-      Samedi : {{ location.hours.saturday }}
+      Du lundi au vendredi : {{ locationsListingCtrl.formatHours(location.hours.weekdays) }}<br>
+      Samedi : {{ locationsListingCtrl.formatHours(location.hours.saturday) }}
     </div>
   </li>
 </ul>
