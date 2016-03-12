@@ -894,12 +894,15 @@ body > main.location div.page_content li.location div.link_container a {
   display: inline-block;
   vertical-align: top;
 }
-body > main.location div.page_content li.location a.directions {
-  margin: 0 20px 0 0;
+body > main.location div.page_content li.location div.link_container a:hover {
+  text-decoration: underline;
+}
+body > main.location div.page_content li.location a.pricing {
+  margin: 0 0 0 20px;
 }
 @media (max-width: 500px) {
-  body > main.location div.page_content li.location a.directions {
-    margin: 0 15px 0 0;
+  body > main.location div.page_content li.location a.pricing {
+    margin: 0 0 0 15px;
   }
 }
 body > main.location div.page_content li.location div.address {

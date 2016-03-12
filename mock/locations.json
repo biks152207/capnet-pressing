@@ -8,7 +8,8 @@
     "hours": {
       "weekdays": ["07:30", "19:15"],
       "saturday": ["08:00", "18:00"]
-    }
+    },
+    "pricing": true
   },
   {
     "name": "Lyon 2 - Charité",
@@ -19,7 +20,8 @@
     "hours": {
       "weekdays": ["07:30", "19:00"],
       "saturday": ["08:00", "18:00"]
-    }
+    },
+    "pricing": true
   },
   {
     "name": "Lyon 2 - Bellecour",
@@ -30,7 +32,8 @@
     "hours": {
       "weekdays": ["08:00", "12:30", "14:00", "19:00"],
       "saturday": ["08:00", "14:00"]
-    }
+    },
+    "pricing": false
   },
   {
     "name": "Lyon 3 - Montchat",
@@ -41,7 +44,8 @@
     "hours": {
       "weekdays": ["07:30", "19:00"],
       "saturday": ["08:00", "19:00"]
-    }
+    },
+    "pricing": true
   },
   {
     "name": "Lyon 7 - Thibaudière",
@@ -52,6 +56,7 @@
     "hours": {
       "weekdays": ["07:45", "19:15"],
       "saturday": ["08:00", "19:00"]
-    }
+    },
+    "pricing": false
   }
 ]
