@@ -1,0 +1,114 @@
+body > nav {
+  background: $color_capnet_primary;
+  flex-basis: 140px;
+
+  @media (max-width: 1000px) {
+    flex-basis: 70px;
+  }
+
+  // logo
+  div.logo_container {
+    padding: 20px 10px;
+    height: 160px;
+
+    a {
+      display: block;
+    }
+
+    img.logo {
+      width: 100%;
+      max-height: 100%;
+    }
+
+    @media (max-width: 1000px) {
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px 0;
+      height: 70px;
+      width: 20%;
+      text-align: center;
+    }
+  }
+
+  // Links
+  a.nav_link {
+    position: relative;
+    display: block;
+    padding: 66px 0 14px 0;
+    height: 100px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: inset 0px -1px 0px 0px rgba(white, 0.2);
+    transition: 0.1s;
+
+    @media (max-width: 1000px) {
+      display: inline-block;
+      vertical-align: top;
+      padding: 48px 0 10px 0;
+      height: 70px;
+      width: 20%;
+      font-size: 10px;
+      line-height: 12px;
+      box-shadow: inset -1px 0px 0px 0px rgba(white, 0.2);
+    }
+
+    &:first-of-type {
+      box-shadow: inset 0px 1px 0px 0px rgba(white, 0.2),
+                  inset 0px -1px 0px 0px rgba(white, 0.2);
+
+      @media (max-width: 1000px) {
+        box-shadow: inset 1px 0px 0px 0px rgba(white, 0.2),
+                    inset -1px 0px 0px 0px rgba(white, 0.2);
+      }
+    }
+
+    &:hover,
+    &.active {
+      background: rgba(white, 0.2);
+      box-shadow: none;
+    }
+
+    &.active {
+      box-shadow: inset -3px 0px 0px 0px $color_capnet_secondary;
+
+      @media (max-width: 1000px) {
+        box-shadow: inset 0px -2px 0px 0px $color_capnet_secondary;
+      }
+    }
+
+    // Icons
+    &:before {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      margin: 0 0 0 -25px;
+      height: 50px;
+      width: 50px;
+      background: url("../images/layout/navigation.svg");
+      background-size: 50px;
+
+      @media (max-width: 1000px) {
+        margin: 0 0 0 -15px;
+        height: 30px;
+        width: 30px;
+        background-size: 30px;
+      }
+    }
+
+    &.services:before { background-position: 0 -50px; }
+    &.contact:before  { background-position: 0 -100px; }
+    &.about:before    { background-position: 0 -150px; }
+
+    @media (max-width: 1000px) {
+      &.services:before { background-position: 0 -30px; }
+      &.contact:before  { background-position: 0 -60px; }
+      &.about:before    { background-position: 0 -90px; }
+    }
+  }
+}

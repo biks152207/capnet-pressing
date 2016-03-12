@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Cap'Net Pressing | Nous situer</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="http://localhost:35729/livereload.js"></script>
+</head>
+<body ng-app="capNetPressingApp">
+  <nav>
+    <div class="logo_container">
+      <a href="/">
+        <img class="logo"
+             src="/images/layout/capnet_logo.svg"
+             alt="Cap'Net logo"
+             title="Cap'Net logo">
+      </a>
+    </div><!--
+ --><a class="location nav_link active"
+       href="/location">
+      Nous situer
+    </a><!--
+ --><a class="services nav_link"
+       href="/services">
+      Services
+    </a><!--
+ --><a class="contact nav_link"
+       href="/contact">
+      Contact
+    </a><!--
+ --><a class="about nav_link"
+       href="/about">
+      À propos
+    </a>
+  </nav><!--
+
+--><main class="location">
+    <div class="page_content">
+      <h1>Nous situer</h1>
+      <div class="map_placeholder_mobile"></div>
+
+      <div locations-listing></div>
+    </div><!--
+ --><div class="maps_container">
+      <div id="js_google_map"
+           class="map">
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/angular.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/modules/locations/listing.js"></script>
+  <script src="/scripts/services/data.js"></script>
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("js_google_map"), {
+        center: { lat: 45.764043, lng: 4.835659 },
+        zoom: 13
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhiTPTNuXsIJ0ykxnaxbjyEDTzBUWLB-I&callback=initMap"
+          async defer>
+  </script>
+</body>
+</html>

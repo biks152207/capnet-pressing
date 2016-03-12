@@ -1,0 +1,7 @@
+body > main {
+  flex-basis: calc(100% - 140px);
+
+  @media (max-width: 1000px) {
+    flex-basis: calc(100% - 70px);
+  }
+}

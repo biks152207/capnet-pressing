@@ -1,0 +1,84 @@
+body > main.location div.page_content {
+
+  h1 {
+    margin: 0 0 10px 0;
+
+    @media (max-width: 767px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  ul.locations {
+    margin: 0;
+    padding: 0;
+  }
+
+  li.location {
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+
+    @media (max-width: 767px) {
+      padding: 10px 0 12px 0;
+    }
+
+    &:not(:last-child) { box-shadow: inset 0px -1px 0px 0px $color_gray; }
+
+    div.title_container {
+      display: flex;
+      margin: 0 0 5px 0;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
+    }
+
+    h2 {
+      margin: 0 auto 0 0;
+
+      @media (max-width: 500px) {
+        margin: 0 0 5px 0;
+      }
+    }
+
+    div.link_container a {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    a.directions {
+      margin: 0 20px 0 0;
+
+      @media (max-width: 500px) {
+        margin: 0 15px 0 0;
+      }
+    }
+
+    div.address {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 20px 0 0;
+      width: calc(100% * 270 / 700);
+
+      @media (min-width: 768px) and (max-width: 1200px),
+             (max-width: 600px) {
+        display: block;
+        margin: 0 0 10px 0;
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    div.hours {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(100% * (700 - 270) / 700);
+
+      @media (min-width: 768px) and (max-width: 1200px),
+             (max-width: 600px) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<ul class="locations">
+  <li class="location"
+      ng-repeat="location in locationsListingCtrl.getLocations()">
+    <div class="title_container">
+      <h2>{{ location.name }}</h2>
+      <div class="links_container">
+        <a class="directions"
+           href=""><!--
+       -->Intinéraire<!--
+     --></a><!--
+     --><a class="pricing"
+           href=""><!--
+       -->Tarifs<!--
+     --></a>
+      </div>
+    </div>
+
+    <div class="address">
+      {{ location.address }}<br>
+      {{ location.zip }}&#32;{{ location.city }}<br>
+      {{ location.phone }}
+    </div><!--
+
+ --><div class="hours">
+      {{ locationsListingCtrl.getHoursNotice(location.hours.weekdays) }}<br>
+      Du lundi au vendredi : {{ locationsListingCtrl.formatHours(location.hours.weekdays) }}<br>
+      Samedi : {{ locationsListingCtrl.formatHours(location.hours.saturday) }}
+    </div>
+  </li>
+</ul>
