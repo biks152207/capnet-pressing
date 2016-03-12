@@ -1,5 +1,12 @@
 # License
 
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [1. Assets under "All right reserved" license](#1-assets-under-all-right-reserved-license)
+- [2. Code under MIT license](#2-code-under-mit-license)
+
+<!-- /TOC -->
+
 ## 1. Assets under "All right reserved" license
 
 The assets related to Cap'Net Pressing such as the logo and the marketing text are the property of Cap'Net Pressing.
