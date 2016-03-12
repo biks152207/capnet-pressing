@@ -23,6 +23,15 @@ body > main.location div.page_content {
     }
 
     &:not(:last-child) { box-shadow: inset 0px -1px 0px 0px $color_gray; }
+
+    div.title_container {
+      display: flex;
+      margin: 0 0 5px 0;
+    }
+
+    h2 {
+      margin: 0 auto 0 0;
+    }
   }
 
 }
