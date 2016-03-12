@@ -1,15 +1,17 @@
-<ul class="locations"
-    ng-repeat="location in locationsListingCtrl.getLocations()">
-  <li class="location">
+<ul class="locations">
+  <li class="location"
+      ng-repeat="location in locationsListingCtrl.getLocations()">
     <div class="title_container">
       <h2>{{ location.name }}</h2>
       <div class="links_container">
-        <a href="">
-          Intinéraire
-        </a><!--
-     --><a href="">
-          Tarifs
-        </a>
+        <a class="directions"
+           href=""><!--
+       -->Intinéraire<!--
+     --></a><!--
+     --><a class="pricing"
+           href=""><!--
+       -->Tarifs<!--
+     --></a>
       </div>
     </div>
 

@@ -425,6 +425,8 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
   color: #333;
   background: #F7F7F7;
 }
@@ -433,6 +435,12 @@ body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -867,6 +875,55 @@ body > main.location div.page_content li.location div.title_container {
   display: flex;
   margin: 0 0 5px 0;
 }
+@media (max-width: 500px) {
+  body > main.location div.page_content li.location div.title_container {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 body > main.location div.page_content li.location h2 {
   margin: 0 auto 0 0;
+}
+@media (max-width: 500px) {
+  body > main.location div.page_content li.location h2 {
+    margin: 0 0 5px 0;
+  }
+}
+body > main.location div.page_content li.location div.link_container a {
+  display: inline-block;
+  vertical-align: top;
+}
+body > main.location div.page_content li.location a.directions {
+  margin: 0 20px 0 0;
+}
+@media (max-width: 500px) {
+  body > main.location div.page_content li.location a.directions {
+    margin: 0 15px 0 0;
+  }
+}
+body > main.location div.page_content li.location div.address {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px 0 0;
+  width: calc(100% * 270 / 700);
+}
+@media (min-width: 768px) and (max-width: 1200px), (max-width: 600px) {
+  body > main.location div.page_content li.location div.address {
+    display: block;
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+body > main.location div.page_content li.location div.hours {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% * (700 - 270) / 700);
+}
+@media (min-width: 768px) and (max-width: 1200px), (max-width: 600px) {
+  body > main.location div.page_content li.location div.hours {
+    display: block;
+    width: 100%;
+  }
 }
