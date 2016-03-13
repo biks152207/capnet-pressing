@@ -11,7 +11,6 @@
       imagemin = require("gulp-imagemin"),
       rename = require("gulp-rename"),
       concat = require("gulp-concat"),
-      notify = require("gulp-notify"),
       cache = require("gulp-cache"),
       livereload = require("gulp-livereload"),
       del = require("del");
@@ -23,23 +22,20 @@
       .pipe(gulp.dest("public/styles"))
       .pipe(rename({ suffix: ".min" }))
       .pipe(cssnano())
-      .pipe(gulp.dest("public/styles"))
-      .pipe(notify({ message: "Styles task complete" }));
+      .pipe(gulp.dest("public/styles"));
   });
 
   // Scripts
   gulp.task("scripts", function() {
     return gulp.src("src/scripts/**/*")
-      .pipe(gulp.dest("public/scripts"))
-      .pipe(notify({ message: "Scripts task complete" }));
+      .pipe(gulp.dest("public/scripts"));
   });
 
   // Images
   gulp.task("images", function() {
     return gulp.src("src/images/**/*")
       .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-      .pipe(gulp.dest("public/images"))
-      .pipe(notify({ message: "Images task complete" }));
+      .pipe(gulp.dest("public/images"));
   });
 
   // Clean
