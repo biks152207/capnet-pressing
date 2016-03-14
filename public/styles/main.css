@@ -1107,3 +1107,194 @@ body main.page.services div.description h2 + h2 {
     margin-top: 20px;
   }
 }
+
+body main.page.contact {
+  overflow: auto;
+}
+body main.page.contact div.page_content {
+  padding: 30px 40px;
+  max-width: 1000px;
+}
+@media (max-width: 767px) {
+  body main.page.contact div.page_content {
+    padding: 20px 20px 30px 20px;
+  }
+}
+body main.page.contact h1 {
+  margin: 0 0 10px 0;
+}
+body main.page.contact ul.links {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+body main.page.contact ul.links li {
+  position: relative;
+  list-style-type: none;
+  margin: 0 0 7px 0;
+  padding: 0 0 0 27px;
+}
+body main.page.contact ul.links li:last-child {
+  margin: 0;
+}
+body main.page.contact ul.links li:before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 50%;
+  left: 0;
+  margin: -10px 0 0 0;
+  height: 20px;
+  width: 20px;
+  background: url("../images/contact/contact.svg");
+  background-size: 20px;
+}
+body main.page.contact ul.links li.email:before {
+  background-position: 0 -20px;
+}
+body main.page.contact ul.links li.address:before {
+  background-position: 0 -40px;
+}
+body main.page.contact ul.links a {
+  color: #727272;
+}
+body main.page.contact p.notice {
+  margin: 0 0 30px 0;
+  color: #727272;
+}
+body main.page.contact div.contact_information,
+body main.page.contact div.message {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 30px 0;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  body main.page.contact div.contact_information,
+  body main.page.contact div.message {
+    width: 100%;
+  }
+}
+body main.page.contact div.contact_information {
+  padding: 0 20px 0 0;
+}
+@media (max-width: 767px) {
+  body main.page.contact div.contact_information {
+    padding: 0;
+  }
+}
+body main.page.contact div.message {
+  padding: 0 0 0 20px;
+}
+@media (max-width: 767px) {
+  body main.page.contact div.message {
+    padding: 0;
+  }
+}
+body main.page.contact fieldset {
+  margin: 0 0 15px 0;
+  padding: 0;
+  border: none;
+}
+body main.page.contact fieldset.last_name, body main.page.contact fieldset.first_name {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+body main.page.contact fieldset.last_name {
+  padding: 0 10px 0 0;
+}
+body main.page.contact fieldset.first_name {
+  padding: 0 0 0 10px;
+}
+body main.page.contact fieldset:last-child {
+  margin: 0;
+}
+body main.page.contact h2 {
+  margin: 0 0 20px 0;
+}
+body main.page.contact label {
+  display: block;
+  margin: 0 0 7px 0;
+  padding: 0;
+}
+body main.page.contact input[type="text"],
+body main.page.contact input[type="email"],
+body main.page.contact input[type="phone"],
+body main.page.contact textarea {
+  display: block;
+  margin: 0;
+  padding: 8px 11px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: none;
+  transition: border-color 0.3s;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media (max-width: 767px) {
+  body main.page.contact input[type="text"],
+  body main.page.contact input[type="email"],
+  body main.page.contact input[type="phone"],
+  body main.page.contact textarea {
+    padding: 9px 11px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+body main.page.contact input[type="text"]:focus,
+body main.page.contact input[type="email"]:focus,
+body main.page.contact input[type="phone"]:focus,
+body main.page.contact textarea:focus {
+  border-color: #2F92DD;
+}
+body main.page.contact input[type="text"],
+body main.page.contact input[type="email"],
+body main.page.contact input[type="phone"] {
+  height: 40px;
+}
+body main.page.contact textarea.address {
+  height: 80px;
+}
+body main.page.contact textarea.message {
+  height: 160px;
+}
+@media (max-width: 767px) {
+  body main.page.contact textarea.message {
+    height: 100px;
+  }
+}
+body main.page.contact div.submit_container {
+  padding: 20px 0 0 0;
+  text-align: right;
+  box-shadow: inset 0px 1px 0px 0px #E5E5E5;
+}
+body main.page.contact button {
+  padding: 9px 15px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: none;
+  color: white;
+  background: #F88223;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  body main.page.contact button {
+    padding: 10px 15px;
+  }
+}
+body main.page.contact button:hover {
+  background: #f7740a;
+}
+body main.page.contact button:disabled {
+  opacity: 0.5;
+}
