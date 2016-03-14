@@ -31,25 +31,28 @@
        href="/about">
       À propos
     </a>
-  </nav><!--
+  </nav>
 
---><main class="location">
-    <div class="page_content">
-      <h1>Nous situer</h1>
-      <div class="map_placeholder_mobile"></div>
+  <div class="page_container">
+    <main class="page location">
+      <div class="page_content">
+        <h1>Nous situer</h1>
+        <div class="map_placeholder_mobile"></div>
 
-      <div locations-listing></div>
-    </div><!--
- --><div class="maps_container">
-      <div id="js_google_map"
-           class="map">
+        <div locations-listing></div>
+      </div><!--
+    --><div class="maps_container">
+        <div id="js_google_map"
+             class="map">
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 
   <script src="/vendor/angular.js"></script>
   <script src="/scripts/app.js"></script>
   <script src="/scripts/modules/locations/listing.js"></script>
+  <script src="/scripts/modules/services/services.js"></script>
   <script src="/scripts/services/data.js"></script>
   <script>
     var map;

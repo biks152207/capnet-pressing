@@ -1,0 +1,105 @@
+<main class="page services">
+  <!-- Common services ##################################################### -->
+  <div class="service">
+    <div class="title"
+         ng-click="servicesCtrl.toggleDescription('commonServices')">
+      <div class="overlay">
+        <h1>Les services courants</h1>
+      </div>
+    </div>
+    <div class="description"
+         ng-class="servicesCtrl.getActiveClassDescription('commonServices')">
+      <h2>Nettoyage à sec et repassage</h2>
+      <p>Chemises, costumes, tailleurs, cravates, vêtements de ski, vêtements d’image, bleus de travail</p>
+
+      <h2>Blanchisserie</h2>
+      <p>Chemises, costumes, tailleurs, cravates, vêtements de ski, vêtements d’image, bleus de travail</p>
+
+      <h2>Ameublements</h2>
+      <p>Nettoyage et Repassage des Rideaux, Portieres, Dessus de lit, Canapés</p>
+    </div>
+  </div>
+
+  <!-- Leather and deer #################################################### -->
+  <div class="service">
+    <div class="title"
+         ng-click="servicesCtrl.toggleDescription('leatherAndDeer')">
+      <div class="overlay">
+        <h1>Cuirs et Daims</h1>
+      </div>
+    </div>
+    <div class="description"
+         ng-class="servicesCtrl.getActiveClassDescription('leatherAndDeer')">
+      <h2>Ateliers spécialisés</h2>
+
+      <h2>Traitement artisanal et délicat</h2>
+
+      <h2>Article nettoyé, re-pigmenté, nourri</h2>
+
+      <h2>Réparation</h2>
+
+      <h2>Contrôle qualité</h2>
+    </div>
+  </div>
+
+  <!-- Applied services #################################################### -->
+  <div class="service">
+    <div class="title"
+         ng-click="servicesCtrl.toggleDescription('appliedServices')">
+      <div class="overlay">
+        <h1>Services appliqués</h1>
+      </div>
+    </div>
+    <div class="description"
+         ng-class="servicesCtrl.getActiveClassDescription('appliedServices')">
+      <h2>Traitements de sinistres</h2>
+      <p>Nettoyage de dégâts après les incendies, les inondations, devis pour les assurances.</p>
+
+      <h2>Conciergeries d’entreprises</h2>
+      <p>Des prestations réalisées "sur mesure".</p>
+
+      <h2>Services aux professionnels</h2>
+      <p>Ramassage, livraison et services spécifiques PRO à la carte.</p>
+    </div>
+  </div>
+
+  <!-- Carpet ############################################################## -->
+  <div class="service">
+    <div class="title"
+         ng-click="servicesCtrl.toggleDescription('carpet')">
+      <div class="overlay">
+        <h1>Tapis</h1>
+      </div>
+    </div>
+    <div class="description"
+         ng-class="servicesCtrl.getActiveClassDescription('carpet')">
+      <h2>Ateliers spécialisés</h2>
+
+      <h2>Dépoussiéré, nettoyé à la main, avec un shampoinage spécifique</h2>
+
+      <h2>Traitements complémentaires (acariens, mites, taches,..)</h2>
+
+      <h2>Réparations</h2>
+
+      <h2>Contrôle qualité</h2>
+    </div>
+  </div>
+
+  <!-- Retouch ############################################################# -->
+  <div class="service">
+    <div class="title"
+         ng-click="servicesCtrl.toggleDescription('retouch')">
+      <div class="overlay">
+        <h1>Retouche</h1>
+      </div>
+    </div>
+    <div class="description"
+         ng-class="servicesCtrl.getActiveClassDescription('retouch')">
+      <h2>Ateliers spécialisés</h2>
+
+      <h2>Délai express</h2>
+
+      <h2>Contrôle qualité</h2>
+    </div>
+  </div>
+</main>

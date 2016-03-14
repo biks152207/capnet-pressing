@@ -1,7 +1,12 @@
-body > main {
+body > div.page_container {
+  display: flex;
   flex-basis: calc(100% - 140px);
 
   @media (max-width: 1000px) {
     flex-basis: calc(100% - 70px);
+  }
+
+  main.page {
+    flex-grow: 1;
   }
 }

@@ -1,0 +1,112 @@
+body main.page.services {
+  display: flex;
+  flex-wrap: nowrap;
+
+  @media (min-width: 768px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  div.service {
+    position: relative;
+    z-index: 1;
+    flex-basis: 400px;
+    flex-shrink: 0;
+    margin: 0 0 0 -1px;
+    background: white;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+
+    @media (max-width: 767px) {
+      flex-basis: auto;
+      flex-shrink: auto;
+    }
+
+    &:hover {
+      @media (min-width: 768px) {
+        z-index: 2;
+        background: $color_gray_lighter;
+        box-shadow: 0 0 30px rgba(black, 0.1);
+      }
+    }
+  }
+
+  // Title #########################################################################################
+  div.title {
+    display: flex;
+    flex-shrink: 0;
+    flex-basis: 260px;
+    background-color: $color_gray_darker;
+    user-select: none;
+
+    @media (max-width: 767px) {
+      height: 140px;
+    }
+
+    div.overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      padding: 0 20px;
+      background: rgba(black, 0.5);
+    }
+
+    h1 {
+      margin: 0;
+      color: white;
+      text-shadow: 0px 2px 4px rgba(black, 0.2);
+    }
+  }
+
+  @for $i from 1 through 5 {
+    div.service:nth-of-type(#{$i}) div.title {
+      background: url("../images/services/service_#{$i}.jpg");
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+
+  // Description ###################################################################################
+  div.description {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 40px 20px;
+    box-shadow: inset 1px 0px 0px 0px $color_gray,
+                inset -1px 0px 0px 0px $color_gray;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      display: none;
+      padding: 30px 20px;
+
+      &.active { display: block; }
+    }
+
+    h2 {
+      margin-bottom: 10px;
+
+      &:last-child { margin-bottom: 0; }
+    }
+
+    p { margin: 0; }
+
+    p + h2,
+    h2 + h2 {
+      margin-top: 40px;
+
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
