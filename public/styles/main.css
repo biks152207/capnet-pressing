@@ -617,20 +617,28 @@ body > nav a.nav_link.about:before {
   }
 }
 
-body > main {
+body > div.page_container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-basis: calc(100% - 140px);
       -ms-flex-preferred-size: calc(100% - 140px);
           flex-basis: calc(100% - 140px);
 }
 @media (max-width: 1000px) {
-  body > main {
+  body > div.page_container {
     -webkit-flex-basis: calc(100% - 70px);
         -ms-flex-preferred-size: calc(100% - 70px);
             flex-basis: calc(100% - 70px);
   }
 }
+body > div.page_container main.page {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
 
-body > main.index {
+body main.page.index {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -649,7 +657,7 @@ body > main.index {
   background-size: cover;
   text-align: center;
 }
-body > main.index:before {
+body main.page.index:before {
   display: inline-block;
   content: "";
   opacity: 0.5;
@@ -661,13 +669,13 @@ body > main.index:before {
   right: 0;
   background: black;
 }
-body > main.index div.title_container {
+body main.page.index div.title_container {
   position: relative;
   z-index: 2;
   padding: 20px 20px 70px 20px;
   max-width: 800px;
 }
-body > main.index div.title_container h1 {
+body main.page.index div.title_container h1 {
   margin: 0 0 20px 0;
   padding: 0;
   font-weight: 400;
@@ -676,13 +684,13 @@ body > main.index div.title_container h1 {
   color: white;
 }
 @media (max-width: 767px) {
-  body > main.index div.title_container h1 {
+  body main.page.index div.title_container h1 {
     margin: 0 0 15px 0;
     font-size: 30px;
     line-height: 40px;
   }
 }
-body > main.index div.title_container p {
+body main.page.index div.title_container p {
   margin: 0 0 25px 0;
   padding: 0;
   font-weight: 400;
@@ -691,13 +699,13 @@ body > main.index div.title_container p {
   color: white;
 }
 @media (max-width: 767px) {
-  body > main.index div.title_container p {
+  body main.page.index div.title_container p {
     margin: 0 0 20px 0;
     font-size: 14px;
     line-height: 20px;
   }
 }
-body > main.index button {
+body main.page.index button {
   padding: 13px 30px;
   font-weight: 400;
   font-size: 18px;
@@ -711,16 +719,16 @@ body > main.index button {
   transition: background 0.1s;
 }
 @media (max-width: 767px) {
-  body > main.index button {
+  body main.page.index button {
     padding: 9px 20px;
     font-size: 16px;
     line-height: 22px;
   }
 }
-body > main.index button:hover, body > main.index button:focus, body > main.index button.active, body > main.index button:active {
+body main.page.index button:hover, body main.page.index button:focus, body main.page.index button.active, body main.page.index button:active {
   background: #f7740a;
 }
-body > main.index footer {
+body main.page.index footer {
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -728,9 +736,9 @@ body > main.index footer {
   right: 0;
   padding: 20px;
 }
-body > main.index footer div.links,
-body > main.index footer a,
-body > main.index footer p {
+body main.page.index footer div.links,
+body main.page.index footer a,
+body main.page.index footer p {
   display: inline-block;
   vertical-align: top;
   padding: 0;
@@ -740,60 +748,60 @@ body > main.index footer p {
   line-height: 20px;
 }
 @media (max-width: 767px) {
-  body > main.index footer div.links,
-  body > main.index footer a,
-  body > main.index footer p {
+  body main.page.index footer div.links,
+  body main.page.index footer a,
+  body main.page.index footer p {
     font-size: 12px;
     line-height: 16px;
   }
 }
 @media (max-width: 767px) {
-  body > main.index footer div.links {
+  body main.page.index footer div.links {
     line-height: 16px;
     margin: 0 0 10px 0;
     display: block;
   }
 }
-body > main.index footer a {
+body main.page.index footer a {
   margin: 0 20px 0 0;
 }
-body > main.index footer a:hover {
+body main.page.index footer a:hover {
   text-decoration: underline;
 }
 @media (max-width: 767px) {
-  body > main.index footer a:last-of-type {
+  body main.page.index footer a:last-of-type {
     margin: 0;
   }
 }
-body > main.index footer p {
+body main.page.index footer p {
   margin: 0;
 }
 
-body > main.location {
+body main.page.location {
   position: relative;
 }
 @media (min-width: 768px) {
-  body > main.location {
+  body main.page.location {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 }
 @media (max-width: 767px) {
-  body > main.location {
+  body main.page.location {
     position: relative;
     z-index: 1;
     overflow-y: scroll;
   }
 }
-body > main.location div.page_content {
+body main.page.location div.page_content {
   padding: 30px 40px;
   background: #F7F7F7;
   box-shadow: 10px 0px 30px 0px rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
 }
 @media (min-width: 768px) {
-  body > main.location div.page_content {
+  body main.page.location div.page_content {
     -webkit-flex-basis: 60%;
         -ms-flex-preferred-size: 60%;
             flex-basis: 60%;
@@ -802,23 +810,23 @@ body > main.location div.page_content {
   }
 }
 @media (max-width: 767px) {
-  body > main.location div.page_content {
+  body main.page.location div.page_content {
     padding: 20px 20px 30px 20px;
   }
 }
 @media (max-width: 767px) {
-  body > main.location div.page_content div.map_placeholder_mobile {
+  body main.page.location div.page_content div.map_placeholder_mobile {
     margin: 0 0 5px 0;
     height: 150px;
   }
 }
-body > main.location div.maps_container {
+body main.page.location div.maps_container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media (min-width: 768px) {
-  body > main.location div.maps_container {
+  body main.page.location div.maps_container {
     -webkit-flex-basis: 40%;
         -ms-flex-preferred-size: 40%;
             flex-basis: 40%;
@@ -827,7 +835,7 @@ body > main.location div.maps_container {
   }
 }
 @media (max-width: 767px) {
-  body > main.location div.maps_container {
+  body main.page.location div.maps_container {
     position: absolute;
     z-index: 2;
     top: 65px;
@@ -838,100 +846,100 @@ body > main.location div.maps_container {
     overflow: hidden;
   }
 }
-body > main.location div.maps_container div.map {
+body main.page.location div.maps_container div.map {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
 }
 
-body > main.location div.page_content h1 {
+body main.page.location div.page_content h1 {
   margin: 0 0 10px 0;
 }
 @media (max-width: 767px) {
-  body > main.location div.page_content h1 {
+  body main.page.location div.page_content h1 {
     margin: 0 0 15px 0;
   }
 }
-body > main.location div.page_content ul.locations {
+body main.page.location div.page_content ul.locations {
   margin: 0;
   padding: 0;
 }
-body > main.location div.page_content li.location {
+body main.page.location div.page_content li.location {
   margin: 0;
   padding: 20px 0;
   list-style: none;
 }
 @media (max-width: 767px) {
-  body > main.location div.page_content li.location {
+  body main.page.location div.page_content li.location {
     padding: 10px 0 12px 0;
   }
 }
-body > main.location div.page_content li.location:not(:last-child) {
+body main.page.location div.page_content li.location:not(:last-child) {
   box-shadow: inset 0px -1px 0px 0px #E5E5E5;
 }
-body > main.location div.page_content li.location div.title_container {
+body main.page.location div.page_content li.location div.title_container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 5px 0;
 }
 @media (max-width: 500px) {
-  body > main.location div.page_content li.location div.title_container {
+  body main.page.location div.page_content li.location div.title_container {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-body > main.location div.page_content li.location h2 {
+body main.page.location div.page_content li.location h2 {
   margin: 0 auto 0 0;
 }
 @media (max-width: 500px) {
-  body > main.location div.page_content li.location h2 {
+  body main.page.location div.page_content li.location h2 {
     margin: 0 0 5px 0;
   }
 }
-body > main.location div.page_content li.location div.link_container a {
+body main.page.location div.page_content li.location div.link_container a {
   display: inline-block;
   vertical-align: top;
 }
-body > main.location div.page_content li.location div.link_container a:hover {
+body main.page.location div.page_content li.location div.link_container a:hover {
   text-decoration: underline;
 }
-body > main.location div.page_content li.location a.pricing {
+body main.page.location div.page_content li.location a.pricing {
   margin: 0 0 0 20px;
 }
 @media (max-width: 500px) {
-  body > main.location div.page_content li.location a.pricing {
+  body main.page.location div.page_content li.location a.pricing {
     margin: 0 0 0 15px;
   }
 }
-body > main.location div.page_content li.location div.address {
+body main.page.location div.page_content li.location div.address {
   display: inline-block;
   vertical-align: top;
   padding: 0 20px 0 0;
   width: calc(100% * 270 / 700);
 }
 @media (min-width: 768px) and (max-width: 1200px), (max-width: 600px) {
-  body > main.location div.page_content li.location div.address {
+  body main.page.location div.page_content li.location div.address {
     display: block;
     margin: 0 0 10px 0;
     padding: 0;
     width: 100%;
   }
 }
-body > main.location div.page_content li.location div.hours {
+body main.page.location div.page_content li.location div.hours {
   display: inline-block;
   vertical-align: top;
   width: calc(100% * (700 - 270) / 700);
 }
 @media (min-width: 768px) and (max-width: 1200px), (max-width: 600px) {
-  body > main.location div.page_content li.location div.hours {
+  body main.page.location div.page_content li.location div.hours {
     display: block;
     width: 100%;
   }
 }
 
-body > main.services {
+body main.page.services {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -941,13 +949,13 @@ body > main.services {
   overflow: auto;
 }
 @media (max-width: 767px) {
-  body > main.services {
+  body main.page.services {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-body > main.services div.service {
+body main.page.services div.service {
   position: relative;
   z-index: 1;
   -webkit-flex-basis: 400px;
@@ -960,7 +968,7 @@ body > main.services div.service {
   background: white;
 }
 @media (min-width: 768px) {
-  body > main.services div.service {
+  body main.page.services div.service {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -970,7 +978,7 @@ body > main.services div.service {
   }
 }
 @media (max-width: 767px) {
-  body > main.services div.service {
+  body main.page.services div.service {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
@@ -980,13 +988,13 @@ body > main.services div.service {
   }
 }
 @media (min-width: 768px) {
-  body > main.services div.service:hover {
+  body main.page.services div.service:hover {
     z-index: 2;
     background: #F7F7F7;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
 }
-body > main.services div.title {
+body main.page.services div.title {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -996,11 +1004,11 @@ body > main.services div.title {
   background-color: #B2B2B2;
 }
 @media (max-width: 767px) {
-  body > main.services div.title {
+  body main.page.services div.title {
     height: 140px;
   }
 }
-body > main.services div.title div.overlay {
+body main.page.services div.title div.overlay {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1016,37 +1024,37 @@ body > main.services div.title div.overlay {
   padding: 0 20px;
   background: rgba(0, 0, 0, 0.5);
 }
-body > main.services div.title h1 {
+body main.page.services div.title h1 {
   margin: 0;
   color: white;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-body > main.services div.service:nth-of-type(1) div.title {
+body main.page.services div.service:nth-of-type(1) div.title {
   background: url("../images/services/service_1.jpg");
   background-position: center center;
   background-size: cover;
 }
-body > main.services div.service:nth-of-type(2) div.title {
+body main.page.services div.service:nth-of-type(2) div.title {
   background: url("../images/services/service_2.jpg");
   background-position: center center;
   background-size: cover;
 }
-body > main.services div.service:nth-of-type(3) div.title {
+body main.page.services div.service:nth-of-type(3) div.title {
   background: url("../images/services/service_3.jpg");
   background-position: center center;
   background-size: cover;
 }
-body > main.services div.service:nth-of-type(4) div.title {
+body main.page.services div.service:nth-of-type(4) div.title {
   background: url("../images/services/service_4.jpg");
   background-position: center center;
   background-size: cover;
 }
-body > main.services div.service:nth-of-type(5) div.title {
+body main.page.services div.service:nth-of-type(5) div.title {
   background: url("../images/services/service_5.jpg");
   background-position: center center;
   background-size: cover;
 }
-body > main.services div.description {
+body main.page.services div.description {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1055,30 +1063,30 @@ body > main.services div.description {
   text-align: center;
 }
 @media (max-width: 767px) {
-  body > main.services div.description {
+  body main.page.services div.description {
     display: none;
     padding: 30px 20px;
   }
-  body > main.services div.description.active {
+  body main.page.services div.description.active {
     display: block;
   }
 }
-body > main.services div.description h2 {
+body main.page.services div.description h2 {
   margin-bottom: 10px;
 }
-body > main.services div.description h2:last-child {
+body main.page.services div.description h2:last-child {
   margin-bottom: 0;
 }
-body > main.services div.description p {
+body main.page.services div.description p {
   margin: 0;
 }
-body > main.services div.description p + h2,
-body > main.services div.description h2 + h2 {
+body main.page.services div.description p + h2,
+body main.page.services div.description h2 + h2 {
   margin-top: 40px;
 }
 @media (max-width: 767px) {
-  body > main.services div.description p + h2,
-  body > main.services div.description h2 + h2 {
+  body main.page.services div.description p + h2,
+  body main.page.services div.description h2 + h2 {
     margin-top: 20px;
   }
 }
