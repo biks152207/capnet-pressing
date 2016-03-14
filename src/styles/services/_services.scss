@@ -46,6 +46,7 @@ body main.page.services {
     flex-shrink: 0;
     flex-basis: 260px;
     background-color: $color_gray_darker;
+    user-select: none;
 
     @media (max-width: 767px) {
       height: 140px;
