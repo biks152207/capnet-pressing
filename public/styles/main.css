@@ -1056,6 +1056,29 @@ body > main.services div.description {
 }
 @media (max-width: 767px) {
   body > main.services div.description {
+    display: none;
     padding: 30px 20px;
+  }
+  body > main.services div.description.active {
+    display: block;
+  }
+}
+body > main.services div.description h2 {
+  margin-bottom: 10px;
+}
+body > main.services div.description h2:last-child {
+  margin-bottom: 0;
+}
+body > main.services div.description p {
+  margin: 0;
+}
+body > main.services div.description p + h2,
+body > main.services div.description h2 + h2 {
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  body > main.services div.description p + h2,
+  body > main.services div.description h2 + h2 {
+    margin-top: 20px;
   }
 }

@@ -77,7 +77,27 @@ body > main.services {
     text-align: center;
 
     @media (max-width: 767px) {
+      display: none;
       padding: 30px 20px;
+
+      &.active { display: block; }
+    }
+
+    h2 {
+      margin-bottom: 10px;
+
+      &:last-child { margin-bottom: 0; }
+    }
+
+    p { margin: 0; }
+
+    p + h2,
+    h2 + h2 {
+      margin-top: 40px;
+
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
     }
   }
 }
