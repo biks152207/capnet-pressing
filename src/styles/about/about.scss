@@ -1,0 +1,91 @@
+body main.page.about {
+  overflow: auto;
+
+  div.page_content {
+    padding: 30px 40px;
+    max-width: 1000px;
+
+    @media (max-width: 767px) {
+      padding: 20px 20px 30px 20px;
+    }
+  }
+
+  section {
+    margin: 0 0 30px 0;
+
+    &:last-child { margin: 0; }
+  }
+
+  p {
+    margin: 0 0 15px 0;
+
+    &:last-child { margin: 0; }
+  }
+
+  // Pro ###########################################################################################
+  section.pro ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      margin: 0 0 10px 0;
+      padding: 0 0 0 30px;
+      list-style: none;
+    }
+
+    // Custom bullet point
+    li:before {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      margin: -3px 0 0 0;
+      width: 6px;
+      height: 6px;
+      border: 1px solid #727272;
+      border-radius: 50%;
+    }
+  }
+
+  // References ####################################################################################
+  section.references {
+    h2 { margin: 0 0 10px 0; }
+
+    ul.references_list {
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+
+    li.reference {
+      display: inline-block;
+      vertical-align: top;
+      list-style: none;
+      margin: 0 10px 5px 0;
+      height: 60px;
+      background: url("../images/about/references.svg");
+      background-size: 239px;
+
+      &.sncf {
+        width: 85px;
+      }
+      &.accorhotels {
+        width: 187px;
+        background-position: 0 -60px;
+      }
+      &.renault {
+        width: 45px;
+        background-position: 0 -120px;
+      }
+      &.air_france {
+        width: 239px;
+        background-position: 0 -180px;
+      }
+      &.rhone {
+        width: 100px;
+        background-position: 0 -240px;
+      }
+    }
+  }
+}
