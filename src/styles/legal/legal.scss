@@ -1,0 +1,27 @@
+body main.page.legal {
+  overflow: auto;
+
+  div.page_content {
+    padding: 30px 40px;
+    max-width: 1000px;
+
+    @media (max-width: 767px) {
+      padding: 20px 20px 30px 20px;
+    }
+  }
+
+  section {
+    margin: 0 0 30px 0;
+
+    &:last-child { margin: 0; }
+  }
+
+  p {
+    margin: 0 0 15px 0;
+
+    &:last-child { margin: 0; }
+  }
+
+  // Phone number
+  a { color: inherit; }
+}
