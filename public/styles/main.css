@@ -1382,3 +1382,31 @@ body main.page.about section.references li.reference.rhone {
   width: 100px;
   background-position: 0 -240px;
 }
+
+body main.page.legal {
+  overflow: auto;
+}
+body main.page.legal div.page_content {
+  padding: 30px 40px;
+  max-width: 1000px;
+}
+@media (max-width: 767px) {
+  body main.page.legal div.page_content {
+    padding: 20px 20px 30px 20px;
+  }
+}
+body main.page.legal section {
+  margin: 0 0 30px 0;
+}
+body main.page.legal section:last-child {
+  margin: 0;
+}
+body main.page.legal p {
+  margin: 0 0 15px 0;
+}
+body main.page.legal p:last-child {
+  margin: 0;
+}
+body main.page.legal a {
+  color: inherit;
+}
