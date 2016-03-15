@@ -408,7 +408,9 @@ th {
   font-weight: 400;
   src: url("../fonts/roboto_regular.ttf") format("truetype");
 }
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -1297,4 +1299,86 @@ body main.page.contact button:hover {
 }
 body main.page.contact button:disabled {
   opacity: 0.5;
+}
+
+body main.page.about {
+  overflow: auto;
+}
+body main.page.about div.page_content {
+  padding: 30px 40px;
+  max-width: 1000px;
+}
+@media (max-width: 767px) {
+  body main.page.about div.page_content {
+    padding: 20px 20px 30px 20px;
+  }
+}
+body main.page.about section {
+  margin: 0 0 30px 0;
+}
+body main.page.about section:last-child {
+  margin: 0;
+}
+body main.page.about p {
+  margin: 0 0 15px 0;
+}
+body main.page.about p:last-child {
+  margin: 0;
+}
+body main.page.about section.pro ul {
+  margin: 0;
+  padding: 0;
+}
+body main.page.about section.pro ul li {
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 30px;
+  list-style: none;
+}
+body main.page.about section.pro ul li:before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin: -3px 0 0 0;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #727272;
+  border-radius: 50%;
+}
+body main.page.about section.references h2 {
+  margin: 0 0 10px 0;
+}
+body main.page.about section.references ul.references_list {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+body main.page.about section.references li.reference {
+  display: inline-block;
+  vertical-align: top;
+  list-style: none;
+  margin: 0 10px 5px 0;
+  height: 60px;
+  background: url("../images/about/references.svg");
+  background-size: 239px;
+}
+body main.page.about section.references li.reference.sncf {
+  width: 85px;
+}
+body main.page.about section.references li.reference.accorhotels {
+  width: 187px;
+  background-position: 0 -60px;
+}
+body main.page.about section.references li.reference.renault {
+  width: 45px;
+  background-position: 0 -120px;
+}
+body main.page.about section.references li.reference.air_france {
+  width: 239px;
+  background-position: 0 -180px;
+}
+body main.page.about section.references li.reference.rhone {
+  width: 100px;
+  background-position: 0 -240px;
 }
