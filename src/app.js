@@ -10,7 +10,7 @@
   var api = require("./api");
 
   var indexRoute = require("../routes/index");
-  var locationRoute = require("../routes/location");
+  var locationsRoute = require("../routes/locations");
   var servicesRoute = require("../routes/services");
   var contactRoute = require("../routes/contact");
   var aboutRoute = require("../routes/about");
@@ -32,7 +32,7 @@
   app.use("/", express.static(path.join(__dirname, "../public")));
 
   app.use("/", indexRoute);
-  app.use("/location", locationRoute);
+  app.use("/locations", locationsRoute);
   app.use("/services", servicesRoute);
   app.use("/contact", contactRoute);
   app.use("/about", aboutRoute);
