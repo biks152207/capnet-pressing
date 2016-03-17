@@ -6,9 +6,10 @@
   /**
    * contactController
    * @param  {Object} $rootScope
+   * @param  {Object} $state
    * @param  {Object} $http
    */
-  function contactController ($rootScope, $http) {
+  function contactController ($rootScope, $state, $http) {
     var _formData = {
       lastName: "",
       firstName: "",
@@ -38,13 +39,10 @@
      */
     this.sendEmail = function () {
 
-      console.log(_formData);
-
       $http.post("/api/contact", _formData)
            .success(function(_formData, status) {
 
-
-        console.log("Sucess!");
+        $state.go("index");
       })
     }
   }

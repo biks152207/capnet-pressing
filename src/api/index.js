@@ -10,5 +10,9 @@
     res.json({ locations: locations });
   })
 
+  api.post("/contact", function (req, res) {
+    res.sendStatus(200);
+  })
+
   module.exports = api;
 })();
