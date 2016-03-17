@@ -56,6 +56,14 @@
               template: "<div legal></div>"
             }
           }
+        })
+        .state("thank-you", {
+          url: "/thank-you",
+          views: {
+            "mainContainer@": {
+              template: "<div thank-you></div>"
+            }
+          }
         });
     });
 })();

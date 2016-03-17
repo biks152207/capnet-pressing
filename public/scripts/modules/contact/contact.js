@@ -42,7 +42,7 @@
       $http.post("/api/contact", _formData)
            .success(function(_formData, status) {
 
-        $state.go("index");
+        $state.go("thank-you");
       })
     }
   }
