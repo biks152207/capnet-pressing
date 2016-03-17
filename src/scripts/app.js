@@ -11,27 +11,51 @@
       $stateProvider
         .state("index", {
           url: "/",
-          templateUrl: "scripts/modules/index/index.html"
+          views: {
+            "mainContainer@": {
+              template: "<div index></div>"
+            }
+          }
         })
         .state("locations", {
           url: "/locations",
-          templateUrl: "scripts/modules/locations/locations.html"
+          views: {
+            "mainContainer@": {
+              template: "<div locations></div>"
+            }
+          }
         })
         .state("services", {
           url: "/services",
-          templateUrl: "scripts/modules/services/services.html"
+          views: {
+            "mainContainer@": {
+              template: "<div services></div>"
+            }
+          }
         })
         .state("contact", {
           url: "/contact",
-          templateUrl: "scripts/modules/contact/contact.html"
+          views: {
+            "mainContainer@": {
+              template: "<div contact></div>"
+            }
+          }
         })
         .state("about", {
           url: "/about",
-          templateUrl: "scripts/modules/about/about.html"
+          views: {
+            "mainContainer@": {
+              template: "<div about></div>"
+            }
+          }
         })
         .state("legal", {
           url: "/legal",
-          templateUrl: "scripts/modules/legal/legal.html"
+          views: {
+            "mainContainer@": {
+              template: "<div legal></div>"
+            }
+          }
         });
     });
 })();

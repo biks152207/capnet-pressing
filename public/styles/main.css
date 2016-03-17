@@ -634,6 +634,14 @@ body > div.page_container {
             flex-basis: calc(100% - 70px);
   }
 }
+body > div.page_container > div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
 body > div.page_container main.page {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
