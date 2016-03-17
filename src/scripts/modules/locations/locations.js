@@ -32,7 +32,7 @@
       restrict: "A",
       templateUrl: "scripts/modules/locations/locations.html",
       controller: locationsController,
-      controllerAs: "locationsCtrl",
+      controllerAs: "locationsCtrl"
     }
   });
 })();
