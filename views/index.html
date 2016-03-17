@@ -2,7 +2,16 @@
 <html ng-app="capNetPressingApp"
       lang="fr">
 <head>
-  <title>Cap'Net Pressing</title>
+  <title ng-bind="meta.title">Cap'Net Pressing</title>
+  <meta ng-if="meta.title"
+        name="title"
+        content="{{ meta.title }}">
+  <meta ng-if="meta.desc"
+        name="description"
+        content="{{ meta.desc }}">
+  <meta ng-if="meta.keywords"
+        name="keywords"
+        content="{{ meta.keywords }}">
   <link rel="stylesheet" href="/styles/main.css">
   <script src="http://localhost:35729/livereload.js"></script>
   <base href="/">
