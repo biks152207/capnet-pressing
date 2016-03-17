@@ -6,7 +6,7 @@
 
   /* GET location page. */
   router.get("/", function(req, res, next) {
-    res.render("locations.html");
+    res.render("index.html");
   });
 
   module.exports = router;

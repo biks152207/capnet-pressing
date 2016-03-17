@@ -6,7 +6,7 @@
 
   /* GET legal page. */
   router.get("/", function(req, res, next) {
-    res.render("legal.html");
+    res.render("index.html");
   });
 
   module.exports = router;

@@ -6,7 +6,7 @@
 
   /* GET services page. */
   router.get("/", function(req, res, next) {
-    res.render("services.html");
+    res.render("index.html");
   });
 
   module.exports = router;

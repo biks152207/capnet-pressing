@@ -6,7 +6,7 @@
 
   /* GET contact page. */
   router.get("/", function(req, res, next) {
-    res.render("contact.html");
+    res.render("index.html");
   });
 
   module.exports = router;
