@@ -130,6 +130,8 @@ body main.page.contact {
     }
 
     &:focus { border-color: $color_blue; }
+
+    &:not(:focus).ng-dirty.ng-invalid { border-color: $color_red; }
   }
 
   input[type="text"],
@@ -171,7 +173,7 @@ body main.page.contact {
       padding: 10px 15px;
     }
 
-    &:hover { background: darken($color_capnet_secondary, 5%); }
+    &:not(:disabled):hover { background: darken($color_capnet_secondary, 5%); }
 
     &:disabled { opacity: 0.5; }
   }

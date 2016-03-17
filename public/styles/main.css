@@ -1300,6 +1300,12 @@ body main.page.contact input[type="phone"]:focus,
 body main.page.contact textarea:focus {
   border-color: #2F92DD;
 }
+body main.page.contact input[type="text"]:not(:focus).ng-dirty.ng-invalid,
+body main.page.contact input[type="email"]:not(:focus).ng-dirty.ng-invalid,
+body main.page.contact input[type="phone"]:not(:focus).ng-dirty.ng-invalid,
+body main.page.contact textarea:not(:focus).ng-dirty.ng-invalid {
+  border-color: #E74C3C;
+}
 body main.page.contact input[type="text"],
 body main.page.contact input[type="email"],
 body main.page.contact input[type="phone"] {
@@ -1339,7 +1345,7 @@ body main.page.contact button {
     padding: 10px 15px;
   }
 }
-body main.page.contact button:hover {
+body main.page.contact button:not(:disabled):hover {
   background: #f7740a;
 }
 body main.page.contact button:disabled {
