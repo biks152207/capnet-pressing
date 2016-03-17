@@ -498,32 +498,32 @@ p {
   }
 }
 
-body > nav {
+body > div.nav_container {
   background: #010454;
   -webkit-flex-basis: 140px;
       -ms-flex-preferred-size: 140px;
           flex-basis: 140px;
 }
 @media (max-width: 1000px) {
-  body > nav {
+  body > div.nav_container {
     -webkit-flex-basis: 70px;
         -ms-flex-preferred-size: 70px;
             flex-basis: 70px;
   }
 }
-body > nav div.logo_container {
+body > div.nav_container div.logo_container {
   padding: 20px 10px;
   height: 160px;
 }
-body > nav div.logo_container a {
+body > div.nav_container div.logo_container a {
   display: block;
 }
-body > nav div.logo_container img.logo {
+body > div.nav_container div.logo_container img.logo {
   width: 100%;
   max-height: 100%;
 }
 @media (max-width: 1000px) {
-  body > nav div.logo_container {
+  body > div.nav_container div.logo_container {
     display: inline-block;
     vertical-align: top;
     padding: 5px 0;
@@ -532,7 +532,7 @@ body > nav div.logo_container img.logo {
     text-align: center;
   }
 }
-body > nav a.nav_link {
+body > div.nav_container a.nav_link {
   position: relative;
   display: block;
   padding: 66px 0 14px 0;
@@ -547,7 +547,7 @@ body > nav a.nav_link {
   transition: 0.1s;
 }
 @media (max-width: 1000px) {
-  body > nav a.nav_link {
+  body > div.nav_container a.nav_link {
     display: inline-block;
     vertical-align: top;
     padding: 48px 0 10px 0;
@@ -558,27 +558,27 @@ body > nav a.nav_link {
     box-shadow: inset -1px 0px 0px 0px rgba(255, 255, 255, 0.2);
   }
 }
-body > nav a.nav_link:first-of-type {
+body > div.nav_container a.nav_link:first-of-type {
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1000px) {
-  body > nav a.nav_link:first-of-type {
+  body > div.nav_container a.nav_link:first-of-type {
     box-shadow: inset 1px 0px 0px 0px rgba(255, 255, 255, 0.2), inset -1px 0px 0px 0px rgba(255, 255, 255, 0.2);
   }
 }
-body > nav a.nav_link:hover, body > nav a.nav_link.active {
+body > div.nav_container a.nav_link:hover, body > div.nav_container a.nav_link.active {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: none;
 }
-body > nav a.nav_link.active {
+body > div.nav_container a.nav_link.active {
   box-shadow: inset -3px 0px 0px 0px #F88223;
 }
 @media (max-width: 1000px) {
-  body > nav a.nav_link.active {
+  body > div.nav_container a.nav_link.active {
     box-shadow: inset 0px -2px 0px 0px #F88223;
   }
 }
-body > nav a.nav_link:before {
+body > div.nav_container a.nav_link:before {
   display: inline-block;
   content: "";
   position: absolute;
@@ -591,30 +591,30 @@ body > nav a.nav_link:before {
   background-size: 50px;
 }
 @media (max-width: 1000px) {
-  body > nav a.nav_link:before {
+  body > div.nav_container a.nav_link:before {
     margin: 0 0 0 -15px;
     height: 30px;
     width: 30px;
     background-size: 30px;
   }
 }
-body > nav a.nav_link.services:before {
+body > div.nav_container a.nav_link.services:before {
   background-position: 0 -50px;
 }
-body > nav a.nav_link.contact:before {
+body > div.nav_container a.nav_link.contact:before {
   background-position: 0 -100px;
 }
-body > nav a.nav_link.about:before {
+body > div.nav_container a.nav_link.about:before {
   background-position: 0 -150px;
 }
 @media (max-width: 1000px) {
-  body > nav a.nav_link.services:before {
+  body > div.nav_container a.nav_link.services:before {
     background-position: 0 -30px;
   }
-  body > nav a.nav_link.contact:before {
+  body > div.nav_container a.nav_link.contact:before {
     background-position: 0 -60px;
   }
-  body > nav a.nav_link.about:before {
+  body > div.nav_container a.nav_link.about:before {
     background-position: 0 -90px;
   }
 }

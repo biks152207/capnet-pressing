@@ -8,32 +8,10 @@
   <base href="/">
 </head>
 <body>
-  <nav>
-    <div class="logo_container">
-      <a href="/">
-        <img class="logo"
-             src="/images/layout/capnet_logo.svg"
-             alt="Cap'Net logo"
-             title="Cap'Net logo">
-      </a>
-    </div><!--
- --><a class="location nav_link"
-       href="/locations">
-      Nous situer
-    </a><!--
- --><a class="services nav_link"
-       href="/services">
-      Services
-    </a><!--
- --><a class="contact nav_link"
-       href="/contact">
-      Contact
-    </a><!--
- --><a class="about nav_link"
-       href="/about">
-      À propos
-    </a>
-  </nav>
+
+  <div navigation
+       class="nav_container">
+  </div>
 
   <div ui-view="mainContainer"
        autoscroll="true"
@@ -50,6 +28,7 @@
   <script src="/scripts/modules/contact/contact.js"></script>
   <script src="/scripts/modules/about/about.js"></script>
   <script src="/scripts/modules/legal/legal.js"></script>
+  <script src="/scripts/modules/shared/navigation.js"></script>
   <script src="/scripts/services/data.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhiTPTNuXsIJ0ykxnaxbjyEDTzBUWLB-I">
   </script>
