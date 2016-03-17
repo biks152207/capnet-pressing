@@ -1,80 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html ng-app="capNetPressingApp"
+      lang="fr">
 <head>
-  <title>Cap'Net Pressing</title>
+  <title ng-bind="meta.title">Cap'Net Pressing</title>
+  <meta ng-if="meta.title"
+        name="title"
+        content="{{ meta.title }}">
+  <meta ng-if="meta.desc"
+        name="description"
+        content="{{ meta.desc }}">
+  <meta ng-if="meta.keywords"
+        name="keywords"
+        content="{{ meta.keywords }}">
   <link rel="stylesheet" href="/styles/main.css">
   <script src="http://localhost:35729/livereload.js"></script>
+  <base href="/">
 </head>
-<body ng-app="capNetPressingApp">
-  <nav>
-    <div class="logo_container">
-      <a href="/">
-        <img class="logo"
-             src="/images/layout/capnet_logo.svg"
-             alt="Cap'Net logo"
-             title="Cap'Net logo">
-      </a>
-    </div><!--
- --><a class="location nav_link"
-       href="/locations">
-      Nous situer
-    </a><!--
- --><a class="services nav_link"
-       href="/services">
-      Services
-    </a><!--
- --><a class="contact nav_link"
-       href="/contact">
-      Contact
-    </a><!--
- --><a class="about nav_link"
-       href="/about">
-      À propos
-    </a>
-  </nav>
+<body>
 
-  <div class="page_container">
-    <main class="page index">
-      <div class="title_container">
-        <h1>Cap’Net Pressing</h1>
-        <p>Depuis prêt de 50 ans, nous sommes au service des particuliers, des entreprises et des professionnels, de tous secteurs d'activité.</p>
-        <button>
-          Nous situer
-        </button>
-      </div>
+  <div navigation
+       class="nav_container">
+  </div>
 
-      <footer>
-        <div class="links">
-          <a class="facebook"
-             target="_blank"
-             href="https://www.facebook.com/pages/Capnet/321949137997335">
-            Facebook
-          </a><!--
-       --><a class="github"
-             target="_blank"
-             href="https://github.com/lanceplaine/capnet-pressing">
-            GitHub
-          </a><!--
-       --><a class="legal"
-             href="/legal">
-            Mentions légales
-          </a>
-        </div><!--
-     --><p class="siret_number">
-          Siret 343 186 482 00042
-        </p>
-      </footer>
-    </main>
+  <div ui-view="mainContainer"
+       autoscroll="true"
+       class="page_container">
   </div>
 
   <script src="/vendor/angular.js"></script>
+  <script src="/vendor/angular-ui-router.js"></script>
   <script src="/scripts/app.js"></script>
+  <script src="/scripts/modules/index/index.js"></script>
   <script src="/scripts/modules/locations/locations.js"></script>
   <script src="/scripts/modules/locations/listing.js"></script>
   <script src="/scripts/modules/services/services.js"></script>
   <script src="/scripts/modules/contact/contact.js"></script>
   <script src="/scripts/modules/about/about.js"></script>
   <script src="/scripts/modules/legal/legal.js"></script>
+  <script src="/scripts/modules/shared/navigation.js"></script>
   <script src="/scripts/services/data.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhiTPTNuXsIJ0ykxnaxbjyEDTzBUWLB-I">
+  </script>
 </body>
 </html>

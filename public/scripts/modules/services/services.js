@@ -5,14 +5,22 @@
 
   /**
    * servicesController
+   * @param  {Object} $rootScope
    */
-  function servicesController () {
+  function servicesController ($rootScope) {
     var _descriptionsActive = {
       commonServices: false,
       leatherAndDeer: false,
       appliedServices: false,
       carpet: false,
       retouch: false
+    };
+
+    // SEO
+    $rootScope.meta = {
+      title: "Services | Cap'Net Pressing",
+      desc: "Le nettoyage à sec, la blanchisserie et le repassage de vêtements, de draps ou de tissus d’ameublement ainsi le nettoyage et le traitement de cuirs, de daims, de tapis, tels sont les services assurés par la firme Cap'Net.",
+      keywords: "Pressing 69, Nettoyage a sec Villeurbanne, Nettoyage cuir et dain 69, Nettoyage cuir et dain Lyon, Nettoyage cuir et dain Lyon Centre, Nettoyage cuir et dain Villeurbanne, Retouche 69, Retouche Lyon, Retouche Lyon Centre, Nettoyage a sec Lyon Centre"
     };
 
     /**
@@ -39,7 +47,6 @@
   app.directive("services", function () {
     return {
       restrict: "A",
-      replace: false,
       templateUrl: "scripts/modules/services/services.html",
       controller: servicesController,
       controllerAs: "servicesCtrl"
