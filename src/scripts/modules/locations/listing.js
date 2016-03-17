@@ -81,7 +81,6 @@
   app.directive("locationsListing", function () {
     return {
       restrict: "A",
-      replace: false,
       templateUrl: "scripts/modules/locations/listing.html",
       controller: locationsListingController,
       controllerAs: "locationsListingCtrl"

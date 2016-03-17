@@ -39,7 +39,6 @@
   app.directive("services", function () {
     return {
       restrict: "A",
-      replace: false,
       templateUrl: "scripts/modules/services/services.html",
       controller: servicesController,
       controllerAs: "servicesCtrl"
