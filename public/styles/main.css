@@ -1374,7 +1374,7 @@ body main.page.about section.references li.reference {
   list-style: none;
   margin: 0 10px 5px 0;
   height: 60px;
-  background: url("../images/about/references.svg");
+  background: url("../images/about/references.png");
   background-size: 239px;
 }
 body main.page.about section.references li.reference.sncf {
