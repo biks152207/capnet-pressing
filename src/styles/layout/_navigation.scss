@@ -18,6 +18,11 @@ body > div.nav_container {
     img.logo {
       width: 100%;
       max-height: 100%;
+
+      @media (max-width: 1000px) {
+        width: auto;
+        height: 60px;
+      }
     }
 
     @media (max-width: 1000px) {
