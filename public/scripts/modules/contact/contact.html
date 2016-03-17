@@ -21,40 +21,64 @@
       Pour toute demande de renseignements ou suggestions sur notre site, n'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.
     </p>
 
-    <form>
+    <form name="contactForm"
+          ng-submit="contactCtrl.sendEmail()">
       <div class="contact_information">
         <h2>Vos coordonnées</h2>
 
         <fieldset class="last_name">
           <label for="last_name">Nom</label>
           <input id="last_name"
-                 type="text">
+                 ng-model="contactCtrl.getFormData().lastName"
+                 type="text"
+                 autocomplete="off"
+                 autocorrect="off"
+                 spellcheck="false"
+                 required>
         </fieldset><!--
 
      --><fieldset class="first_name">
           <label for="first_name">Prénom</label>
           <input id="first_name"
-                 type="text">
+                 ng-model="contactCtrl.getFormData().firstName"
+                 type="text"
+                 autocomplete="off"
+                 autocorrect="off"
+                 spellcheck="false"
+                 required>
         </fieldset>
 
         <fieldset class="email">
           <label for="email">Email</label>
           <input id="email"
-                 type="email">
+                 ng-model="contactCtrl.getFormData().email"
+                 type="email"
+                 autocomplete="off"
+                 autocorrect="off"
+                 spellcheck="false"
+                 required>
         </fieldset>
 
         <fieldset class="phone">
           <label for="phone">Téléphone</label>
           <input id="phone"
                  type="phone"
-                 placeholder="Optionnel">
+                 ng-model="contactCtrl.getFormData().phone"
+                 placeholder="Optionnel"
+                 autocomplete="off"
+                 autocorrect="off"
+                 spellcheck="false">
         </fieldset>
 
         <fieldset class="address">
           <label for="address">Adresse</label>
           <textarea id="address"
                     class="address"
-                    placeholder="Optionnel"></textarea>
+                    ng-model="contactCtrl.getFormData().address"
+                    placeholder="Optionnel"
+                    autocomplete="off"
+                    autocorrect="off"
+                    spellcheck="false"></textarea>
         </fieldset>
       </div><!--
 
@@ -64,12 +88,15 @@
         <fieldset class="message">
           <label for="message">Message</label>
           <textarea id="message"
-                    class="message"></textarea>
+                    class="message"
+                    ng-model="contactCtrl.getFormData().message"
+                    required></textarea>
         </fieldset>
       </div>
 
       <div class="submit_container">
-        <button type="submit">
+        <button type="submit"
+                ng-disabled="contactForm.$invalid">
           Envoyer votre message
         </button>
       </div>
