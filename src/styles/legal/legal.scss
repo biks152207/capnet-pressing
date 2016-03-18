@@ -1,5 +1,6 @@
 body main.page.legal {
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
   div.page_content {
     padding: 30px 40px;
