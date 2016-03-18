@@ -1,11 +1,12 @@
 body main.page.services {
   display: flex;
   flex-wrap: nowrap;
+   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
   @media (min-width: 768px) {
     overflow-x: scroll;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
   }
 
   @media (max-width: 767px) {

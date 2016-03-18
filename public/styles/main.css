@@ -993,12 +993,13 @@ body main.page.services {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 @media (min-width: 768px) {
   body main.page.services {
     overflow-x: scroll;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 767px) {
