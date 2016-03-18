@@ -826,6 +826,8 @@ body main.page.index footer p {
 
 body main.page.location {
   position: relative;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 @media (min-width: 768px) {
   body main.page.location {
@@ -838,16 +840,12 @@ body main.page.location {
   body main.page.location {
     position: relative;
     z-index: 1;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
   }
 }
 body main.page.location div.page_content {
   padding: 30px 40px;
   background: #F7F7F7;
   box-shadow: 10px 0px 30px 0px rgba(0, 0, 0, 0.1);
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 @media (min-width: 768px) {
   body main.page.location div.page_content {

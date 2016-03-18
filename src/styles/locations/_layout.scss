@@ -1,5 +1,7 @@
 body main.page.location {
   position: relative;
+   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
   @media (min-width: 768px) {
     display: flex;
@@ -8,16 +10,12 @@ body main.page.location {
   @media (max-width: 767px) {
     position: relative;
     z-index: 1;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
   }
 
   div.page_content {
     padding: 30px 40px;
     background: $color_gray_lighter;
     box-shadow: 10px 0px 30px 0px rgba(black, 0.1);
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 
     @media (min-width: 768px) {
       flex-basis: 60%;
