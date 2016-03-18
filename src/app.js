@@ -36,6 +36,11 @@
     next(err);
   });
 
+  // Set a default Google Maps API key (Only available on localhost:3000)
+  if (!process.env.GOOGLE_MAPS_API_KEY) {
+    process.env.GOOGLE_MAPS_API_KEY = "AIzaSyAuDixR3dXmRr2g1PVzFAm5pLUkf7VWc5E";
+  }
+
   // Error handlers
 
   // Development error handler
