@@ -31,7 +31,12 @@
 
     emailSenderName = firstName + " " + lastName;
 
-    emailSubject = "Nouveau message de " + emailSenderName;
+    if (process.env.NODE_ENV === "development") {
+      emailSubject = "[Local] Nouveau message de " + emailSenderName;
+    }
+    else {
+      emailSubject = "Nouveau message de " + emailSenderName;
+    }
 
     emailBody = "Prénom : " + firstName + "<br>";
     emailBody += "Nom : " + lastName + "<br>";
