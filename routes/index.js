@@ -6,7 +6,7 @@
 
   /* GET index page. */
   router.get("/", function(req, res, next) {
-    res.render("index.html");
+    res.render("index.ejs");
   });
 
   module.exports = router;

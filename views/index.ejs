@@ -13,7 +13,9 @@
         name="keywords"
         content="{{ meta.keywords }}">
   <link rel="stylesheet" href="/styles/main.css">
-  <script src="http://localhost:35729/livereload.js"></script>
+  <% if (process.env.NODE_ENV === "development") { %>
+    <script src="http://localhost:35729/livereload.js"></script>
+  <% } %>
   <base href="/">
 </head>
 <body>
@@ -40,7 +42,7 @@
   <script src="/scripts/modules/thank_you/thank_you.js"></script>
   <script src="/scripts/modules/shared/navigation.js"></script>
   <script src="/scripts/services/data.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhiTPTNuXsIJ0ykxnaxbjyEDTzBUWLB-I">
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.GOOGLE_MAPS_API_KEY %>">
   </script>
 </body>
 </html>

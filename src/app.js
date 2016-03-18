@@ -12,10 +12,11 @@
 
   var app = express();
 
+  require("dotenv").config();
+
   // View engine setup
   app.set("views", path.join(__dirname, "../views"));
   app.set("view engine", "ejs");
-  app.engine("html", require("ejs").renderFile);
 
   // TODO @kla: Uncomment after placing your favicon in /public
   // app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
@@ -35,11 +36,16 @@
     next(err);
   });
 
+  // Set a default Google Maps API key (Only available on localhost:3000)
+  if (!process.env.GOOGLE_MAPS_API_KEY) {
+    process.env.GOOGLE_MAPS_API_KEY = "AIzaSyAuDixR3dXmRr2g1PVzFAm5pLUkf7VWc5E";
+  }
+
   // Error handlers
 
   // Development error handler
   // Will print stacktrace
-  if (app.get("env") === "development") {
+  if (process.env.NODE_ENV === "development") {
     app.use(function(err, req, res, next) {
       res.status(err.status || 500);
       res.render("error", {
