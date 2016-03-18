@@ -10,6 +10,11 @@
 
   var sendgrid  = require("sendgrid")(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
+  // Set a default contact form email
+  if (!process.env.CONTACT_FORM_EMAIL) {
+    process.env.CONTACT_FORM_EMAIL = "example@example.com";
+  }
+
   // Locations listing #############################################################################
   api.get("/locations", function (req, res) {
     res.json({ locations: locations });
@@ -54,7 +59,7 @@
 
     // Send email --------------------------------------------------------------
     sendgrid.send({
-      to:       "kevin@lanceplaine.com",
+      to:       process.env.CONTACT_FORM_EMAIL,
       from:     email,
       fromname: emailSenderName,
       subject:  emailSubject,

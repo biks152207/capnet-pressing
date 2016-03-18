@@ -8,10 +8,11 @@
 
 - [1. Design](#1-design)
 - [2. Install config](#2-install-config)
+	- [2.1 NPM](#21-npm)
+	- [2.2 Set up the env variable (Optional)](#22-set-up-the-env-variable-optional)
 - [3. Start server](#3-start-server)
-	- [3.3 Set up the env variable (Optional)](#33-set-up-the-env-variable-optional)
-	- [3.2 NPM](#32-npm)
-	- [3.3 Gulp](#33-gulp)
+	- [3.1 NPM](#31-npm)
+	- [3.2 Gulp](#32-gulp)
 
 <!-- /TOC -->
 
@@ -21,21 +22,27 @@ Please checkout the [dedicated repository](https://github.com/lanceplaine/capnet
 
 ## 2. Install config
 
+### 2.1 NPM
+
 ```console
 npm install
 ```
 
-## 3. Start server
-
-### 3.3 Set up the env variable (Optional)
+### 2.2 Set up the env variable (Optional)
 
 Add a `.env` in the root folder.
 
 ```ruby
-NODE_ENV=development
+NODE_ENV=development      # If you leave it blank, it will fallback on production
+GOOGLE_MAPS_API_KEY=XXXXX # If you leave it blank, it will fallback on the default API key AIzaSyAuDixR3dXmRr2g1PVzFAm5pLUkf7VWc5E (Only for localhost:3000)
+SENDGRID_USERNAME=XXXXX   # If you want to send emails
+SENDGRID_PASSWORD=XXXXX
+CONTACT_FORM_EMAIL=XXXXX  # If you leave it blank, it will fallback on the default email address example@example.com
 ```
 
-### 3.2 NPM
+## 3. Start server
+
+### 3.1 NPM
 
 For production and development
 
@@ -43,7 +50,7 @@ For production and development
 npm start
 ```
 
-### 3.3 Gulp
+### 3.2 Gulp
 
 For development only
 
